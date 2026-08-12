@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PellBella Clínica Estética — Tecnología BTL de vanguardia. EMSELLA, EMSCULPT, EXILIS ULTRA 360, EXILITE, LYMPHASTIM. Terapia de Rehabilitación de Piso pélvico, tratamientos faciales, corporales y bienestar íntimo en Costa Rica.">
+<title>PellBella | Clínica Estética · Tecnología Original de BTL</title>
+<script src="https://www.youtube.com/iframe_api"></script>
+<link rel="icon" type="image/png" href="favicon-pellbella.png">
+<!--
+  ══ GUÍA DE USO DE LOGOS PELLBELLA ══
+  • logo-pellbellacr-full.png   → Logo completo (mujer + "Bella") en NARANJA/TURQUESA.
+                                    Úsalo sobre fondos OSCUROS o CLAROS — ambos colores
+                                    tienen buen contraste en los dos casos. Es el que se
+                                    usa en el nav y el footer de este sitio (fondo oscuro).
+  • logo-pellbella-dark-bg.png  → Solo el símbolo "B" (sin la mujer ni el texto "ella"),
+                                    en naranja/turquesa. Pensado para espacios reducidos
+                                    sobre fondo OSCURO (ej. favicon, ícono de app, redes
+                                    sociales con fondo oscuro). Se usa aquí como favicon.
+  • logo-pellbella-light-bg.png → Logo completo con la mujer y las letras "e/e/a" en NEGRO.
+                                    Úsalo SOLO sobre fondos CLAROS/BLANCOS — el negro se
+                                    pierde sobre fondos oscuros. Ideal para papelería,
+                                    documentos Word/PDF, firma de correo, fondo blanco.
+                                    No se usa en este sitio porque todo el diseño es oscuro.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#D85A30;--orange2:#F07040;--orange-dark:#993C1D;--orange-light:#F5C4B3;
+  --teal:#00BCD4;--teal2:#0097A7;--teal-light:#80DEEA;
+  --dark:#0C0A08;--dark2:#161210;--dark3:#1F1A16;--dark4:#2A2218;
+  --mid:#5C4A3D;--cream:#FAF8F5;--white:#FFFFFF;
+  --text-dim:rgba(250,248,245,0.55);--text-mid:rgba(250,248,245,0.80);
+  --border-light:rgba(250,248,245,0.08);--border-orange:rgba(216,90,48,0.3);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+section{padding:90px 24px}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark2)}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:2px}
+
+/* ─── UTILITY ─── */
+.container{max-width:1100px;margin:0 auto}
+.container-sm{max-width:720px;margin:0 auto}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.tag::before{content:'';width:22px;height:1.5px;background:var(--orange);display:inline-block}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.1}
+.section-title{font-size:clamp(34px,5vw,54px);color:var(--cream);margin-bottom:16px}
+.section-sub{font-size:16px;color:var(--text-mid);line-height:1.7;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;border:none}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(250,248,245,0.25)}
+.btn-outline:hover{background:rgba(250,248,245,0.08);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* ─── REVEAL ANIMATION ─── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:none}
+.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+.delay-4{transition-delay:.4s}.delay-5{transition-delay:.5s}
+
+/* ─── FLOATING WHATSAPP ─── */
+.wa-float{position:fixed;bottom:28px;right:24px;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D166;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,209,102,.45);transition:transform .2s;cursor:pointer}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-tooltip{position:absolute;right:70px;top:50%;transform:translateY(-50%);background:#111;color:#fff;font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* ─── STICKY CTA ─── */
+.sticky-cta{position:fixed;top:0;left:0;right:0;z-index:990;background:rgba(12,10,8,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border-light);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;transform:none;transition:transform .35s ease}
+.sticky-cta.show{transform:none}
+.sticky-cta .s-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--cream)}
+.sticky-cta .s-name span{color:var(--orange);font-style:italic}
+.sticky-cta-btns{display:flex;gap:10px;align-items:center}
+
+/* ─── HERO ─── */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 24px 80px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 70% 40%,rgba(216,90,48,.18) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 20% 80%,rgba(0,188,212,.14) 0%,transparent 60%),var(--dark);z-index:0}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(250,248,245,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(250,248,245,.03) 1px,transparent 1px);background-size:60px 60px;z-index:0}
+.hero-content{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(216,90,48,.12);border:1px solid rgba(216,90,48,.25);border-radius:100px;padding:7px 16px;font-size:12px;color:var(--orange);font-weight:500;margin-bottom:28px;animation:fadeDown .8s ease both}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 1.8s ease-in-out infinite}
+.hero-h1{font-size:clamp(46px,7vw,88px);line-height:1.0;color:var(--cream);margin-bottom:12px;animation:fadeDown .8s .1s ease both}
+.hero-h1 em{font-style:italic;color:var(--orange)}
+.hero-h1 .line2{display:block;color:var(--text-mid);font-size:.65em;margin-top:4px;font-weight:300}
+.hero-sub{font-size:17px;color:var(--text-mid);max-width:520px;line-height:1.7;margin-bottom:36px;animation:fadeDown .8s .2s ease both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeDown .8s .3s ease both}
+.hero-stats{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid var(--border-light);flex-wrap:wrap;animation:fadeDown .8s .4s ease both}
+.hero-stat .num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--orange);line-height:1}
+.hero-stat .lbl{font-size:12px;color:var(--text-dim);margin-top:2px;font-weight:400;letter-spacing:.04em}
+.hero-float{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:340px;max-width:40vw;z-index:1;animation:fadeRight .9s .3s ease both}
+.hero-float-card{background:rgba(31,26,22,.85);border:1px solid var(--border-light);border-radius:24px;padding:28px;backdrop-filter:blur(20px)}
+.hero-float-card .fc-tag{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.hero-float-card .fc-equip{display:flex;flex-direction:column;gap:12px}
+.equip-pill{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(216,90,48,.08);border:1px solid rgba(216,90,48,.15);border-radius:12px}
+.equip-pill-icon{width:36px;height:36px;border-radius:8px;background:rgba(216,90,48,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.equip-pill-icon svg{width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.equip-pill-name{font-size:13px;font-weight:500;color:var(--cream)}
+.equip-pill-sub{font-size:11px;color:var(--text-dim)}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeDown .8s .6s ease both;z-index:1}
+.hero-scroll span{font-size:10px;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--orange),transparent);animation:scrollLine 1.6s ease-in-out infinite}
+
+/* ─── LOGOS BAR ─── */
+#trust{padding:30px 24px;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:32px}
+.trust-item{display:flex;align-items:center;gap:10px;opacity:.5;filter:grayscale(1);transition:all .2s}
+.trust-item:hover{opacity:1;filter:none}
+.trust-item svg{width:28px;height:28px;flex-shrink:0}
+.trust-item span{font-size:13px;font-weight:500;letter-spacing:.04em}
+
+/* ─── ABOUT ─── */
+#about{background:var(--dark2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-frame{border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:var(--dark3);display:flex;align-items:center;justify-content:center;position:relative}
+.about-img-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--dark3),var(--dark4));display:flex;align-items:center;justify-content:center}
+.about-img-placeholder .pb-big{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:rgba(216,90,48,.25)}
+.about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--orange);border-radius:20px;padding:20px 24px;text-align:center}
+.about-badge .ab-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1}
+.about-badge .ab-txt{font-size:11px;color:rgba(255,255,255,.8);margin-top:2px;line-height:1.3}
+.about-card{background:rgba(216,90,48,.06);border:1px solid rgba(216,90,48,.15);border-radius:16px;padding:20px;margin-top:28px}
+.about-card .ac-title{font-size:13px;font-weight:500;color:var(--orange);margin-bottom:8px}
+.about-card .ac-list{display:flex;flex-direction:column;gap:6px}
+.about-card .ac-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--text-mid)}
+.about-card .ac-item::before{content:'✓';color:var(--teal);font-weight:600;flex-shrink:0;margin-top:1px}
+.jennifer-box{display:flex;align-items:center;gap:14px;margin-top:28px;padding:18px;background:rgba(250,248,245,.04);border:1px solid var(--border-light);border-radius:14px}
+.jennifer-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-dark));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff}
+.jennifer-info .ji-name{font-size:15px;font-weight:500;color:var(--cream)}
+.jennifer-info .ji-title{font-size:12px;color:var(--text-dim)}
+
+/* ─── QUIERO ANALIZAR MIS RESULTADOS (formulario evento) ─── */
+#analisis{background:var(--dark2)}
+.analisis-grid{display:grid;grid-template-columns:1fr 2fr;gap:44px;align-items:stretch}
+.analisis-img-col{border-radius:24px;overflow:hidden;background:var(--dark3);border:1px solid var(--border-light);min-height:340px;position:relative;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr}
+.analisis-img-col .analisis-img-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.analisis-img-row{position:relative;z-index:1;border:1px solid rgba(0,0,0,.35)}
+.analisis-img-row.full{grid-column:1/-1}
+.analisis-card{background:var(--dark3);border:1px solid var(--border-light);border-radius:24px;padding:36px}
+.analisis-social-row{display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:26px;border-top:1px solid var(--border-light);flex-wrap:wrap}
+.analisis-social-icons{display:flex;gap:10px}
+.analisis-social-icons a{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(250,248,245,.04);border:1px solid var(--border-light);transition:all .2s}
+.analisis-social-icons a:hover{border-color:var(--border-orange);transform:translateY(-2px)}
+.analisis-social-text{font-size:13px;color:var(--text-mid);line-height:1.5;max-width:260px}
+@media(max-width:780px){
+  .analisis-grid{grid-template-columns:1fr}
+  .analisis-img-col{min-height:220px}
+}
+
+/* ─── EQUIPMENT ─── */
+#equipment{background:var(--dark)}
+.equip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.equip-card{background:var(--dark3);border:1px solid var(--border-light);border-radius:24px;overflow:hidden;transition:all .3s;position:relative}
+.equip-card:hover{border-color:var(--border-orange);transform:translateY(-6px)}
+.equip-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--teal));opacity:0;transition:opacity .3s}
+.equip-card:hover::before{opacity:1}
+.equip-hero{height:200px;background:var(--dark4);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.equip-hero-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.equip-hero-num{font-family:'Cormorant Garamond',serif;font-size:100px;font-weight:700;color:rgba(216,90,48,.06);line-height:1;user-select:none}
+.equip-icon-big{position:relative;z-index:1;width:80px;height:80px;border-radius:20px;background:rgba(216,90,48,.12);border:1px solid rgba(216,90,48,.2);display:flex;align-items:center;justify-content:center}
+.equip-icon-big svg{width:40px;height:40px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.equip-body{padding:24px}
+.equip-brand{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.equip-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--cream);margin-bottom:12px}
+.equip-desc{font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:18px}
+.equip-specs{display:flex;flex-direction:column;gap:8px}
+.spec-row{display:flex;align-items:center;justify-content:space-between;font-size:12px;padding-bottom:8px;border-bottom:1px solid var(--border-light)}
+.spec-row:last-child{border:none;padding:0}
+.spec-label{color:var(--text-dim)}
+.spec-val{color:var(--cream);font-weight:500}
+.equip-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:500;padding:4px 10px;border-radius:100px;background:rgba(0,188,212,.1);border:1px solid rgba(0,188,212,.2);color:var(--teal);margin-top:16px}
+.equip-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+/* ─── SERVICES ─── */
+#services{background:var(--dark2)}
+.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc-card{background:var(--dark3);border:1px solid var(--border-light);border-radius:18px;padding:22px 18px;transition:all .25s;cursor:default;position:relative;overflow:hidden}
+.svc-card:hover{border-color:var(--border-orange);background:var(--dark4)}
+.svc-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 0%,rgba(216,90,48,.06),transparent 60%);opacity:0;transition:opacity .3s}
+.svc-card:hover::after{opacity:1}
+.svc-icon{width:44px;height:44px;border-radius:12px;background:rgba(216,90,48,.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px}
+.svc-name{font-size:14px;font-weight:500;color:var(--cream);margin-bottom:6px}
+.svc-desc{font-size:12px;color:var(--text-dim);line-height:1.5}
+
+/* ─── RESULTS ─── */
+#results{background:var(--dark);overflow:hidden}
+.results-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.result-card{background:var(--dark3);border:1px solid var(--border-light);border-radius:20px;overflow:hidden;transition:transform .3s,border-color .3s}
+.result-card:hover{transform:translateY(-4px);border-color:var(--border-orange)}
+.result-img{height:220px;background:var(--dark4);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.result-before-after{display:grid;grid-template-columns:1fr 1fr;height:100%;width:100%}
+.result-side{display:flex;align-items:center;justify-content:center;position:relative}
+.result-side-label{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px}
+.label-antes{background:rgba(255,255,255,.15);color:rgba(255,255,255,.7)}
+.label-despues{background:var(--orange);color:#fff}
+.result-icon{font-size:36px}
+.result-divider-line{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:rgba(216,90,48,.5);z-index:2}
+.result-body{padding:20px}
+.result-condition{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.result-title{font-size:15px;font-weight:500;color:var(--cream);margin-bottom:8px}
+.result-detail{font-size:12px;color:var(--text-dim);line-height:1.5;margin-bottom:14px}
+.result-pills{display:flex;gap:6px;flex-wrap:wrap}
+.result-pill{font-size:11px;padding:3px 10px;border-radius:100px;background:rgba(0,188,212,.1);border:1px solid rgba(0,188,212,.15);color:var(--teal)}
+
+/* ─── PROCESS ─── */
+#process{background:var(--dark2)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:1px;background:linear-gradient(90deg,var(--orange),var(--teal));z-index:0}
+.process-step{position:relative;z-index:1;text-align:center;padding:0 16px}
+.ps-num{width:80px;height:80px;border-radius:50%;background:var(--dark3);border:2px solid var(--border-orange);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--orange);position:relative}
+.ps-num::after{content:'';position:absolute;inset:4px;border-radius:50%;background:radial-gradient(circle,rgba(216,90,48,.08),transparent)}
+.ps-title{font-size:14px;font-weight:500;color:var(--cream);margin-bottom:8px}
+.ps-desc{font-size:12px;color:var(--text-dim);line-height:1.55}
+
+/* ─── TESTIMONIALS ─── */
+#testimonials{background:var(--dark);overflow:hidden}
+.testi-track{display:flex;gap:24px;overflow-x:auto;padding:8px 0 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.testi-track::-webkit-scrollbar{display:none}
+.testi-card{background:var(--dark3);border:1px solid var(--border-light);border-radius:20px;padding:28px;min-width:320px;max-width:360px;flex-shrink:0;transition:border-color .25s}
+.testi-card:hover{border-color:var(--border-orange)}
+.testi-stars{display:flex;gap:3px;margin-bottom:16px}
+.testi-stars span{font-size:14px}
+.testi-quote{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--cream);line-height:1.5;margin-bottom:20px}
+.testi-quote::before{content:'\201C';color:var(--orange);font-size:36px;line-height:.6;display:block;margin-bottom:8px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-dark));display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;font-weight:500;flex-shrink:0}
+.testi-name{font-size:13px;font-weight:500;color:var(--cream)}
+.testi-detail{font-size:11px;color:var(--text-dim)}
+.testi-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:100px;background:rgba(0,188,212,.12);color:var(--teal);margin-top:4px;border:1px solid rgba(0,188,212,.15)}
+
+/* ─── MARQUEE RIBBON ─── */
+.marquee-wrap{overflow:hidden;background:rgba(0,0,0,.15);border-top:1px solid rgba(255,255,255,.15);padding:14px 0;margin-top:44px}
+.marquee-track{display:flex;width:max-content;animation:marqueeScroll 28s linear infinite}
+.marquee-track span{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:#fff;white-space:nowrap;padding:0 40px}
+.marquee-track span::before{content:'✚';color:rgba(255,255,255,.7);font-size:12px}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── STATS BANNER ─── */
+#stats{background:linear-gradient(135deg,var(--orange-dark),var(--orange));padding:60px 24px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:900px;margin:0 auto;text-align:center}
+.stat-item .stat-num{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:#fff;line-height:1}
+.stat-item .stat-label{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px}
+
+/* ─── LOCATION ─── */
+#location{background:var(--dark2)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.map-embed{border-radius:20px;overflow:hidden;height:360px;background:var(--dark3);border:1px solid var(--border-light);position:relative;display:flex;align-items:center;justify-content:center}
+.map-placeholder{text-align:center;padding:32px}
+.map-placeholder svg{width:48px;height:48px;stroke:var(--orange);fill:none;stroke-width:1.5;margin:0 auto 16px}
+.map-placeholder p{font-size:13px;color:var(--text-dim)}
+.map-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;color:var(--orange);font-weight:500}
+.contact-items{display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.contact-item{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--dark3);border:1px solid var(--border-light);border-radius:14px;transition:border-color .2s}
+.contact-item:hover{border-color:var(--border-orange)}
+.ci-icon{width:40px;height:40px;border-radius:10px;background:rgba(216,90,48,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.ci-icon svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ci-label{font-size:11px;color:var(--text-dim);margin-bottom:3px}
+.ci-value{font-size:14px;font-weight:500;color:var(--cream)}
+
+/* ─── SOCIAL LINKS SECTION ─── */
+#social{background:var(--dark);padding:80px 24px}
+.social-inner{max-width:600px;margin:0 auto;text-align:center}
+.social-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:600;color:var(--cream);margin-bottom:12px}
+.social-sub{font-size:15px;color:var(--text-mid);margin-bottom:48px}
+.social-links{display:flex;flex-direction:column;gap:12px}
+.social-btn{display:flex;align-items:center;gap:14px;padding:16px 22px;border-radius:16px;background:var(--dark3);border:1px solid var(--border-light);transition:all .2s;cursor:pointer}
+.social-btn:hover{transform:translateX(6px);border-color:var(--border-orange)}
+.social-btn-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.social-btn-icon svg{width:24px;height:24px}
+.social-btn-text{flex:1;text-align:left}
+.social-btn-label{font-size:14px;font-weight:500;color:var(--cream);display:block}
+.social-btn-sub{font-size:12px;color:var(--text-dim);display:block;margin-top:2px}
+.social-btn-arrow{color:var(--text-dim);font-size:18px;transition:transform .2s}
+.social-btn:hover .social-btn-arrow{transform:translateX(4px);color:var(--orange)}
+
+/* ─── CTA FINAL ─── */
+#cta-final{background:var(--dark2);padding:100px 24px;text-align:center}
+.cta-bg{background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(216,90,48,.12),transparent 70%)}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,72px);font-weight:600;color:var(--cream);margin-bottom:16px}
+.cta-title em{color:var(--orange);font-style:italic}
+.cta-sub{font-size:16px;color:var(--text-mid);max-width:480px;margin:0 auto 40px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ─── FOOTER ─── */
+footer{background:var(--dark);border-top:1px solid var(--border-light);padding:40px 24px;text-align:center}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--cream)}
+.footer-logo span{color:var(--orange);font-style:italic}
+.footer-copy{font-size:12px;color:var(--text-dim)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:12px;color:var(--text-dim);transition:color .2s}
+.footer-links a:hover{color:var(--orange)}
+
+/* ─── KEYFRAMES ─── */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+@keyframes scrollLine{0%{height:40px;opacity:1}100%{height:10px;opacity:0}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .about-grid,.location-grid,.services-intro,.results-intro{grid-template-columns:1fr;gap:40px}
+  .equip-grid,.results-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+  .process-steps::before{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-float{display:none}
+  .sticky-cta-btns .btn-outline{display:none}
+  .footer-inner{flex-direction:column;align-items:center;text-align:center}
+}
+@media(max-width:560px){
+  section{padding:64px 20px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .hero-btns .btn-outline{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ─── VIDEO HERO ─── */
+.hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-video-frame{position:absolute;top:50%;left:50%;width:177.78vh;min-width:100%;height:100vh;min-height:56.25vw;transform:translate(-50%,-50%);border:none;opacity:.38}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(12,10,8,.88) 35%,rgba(12,10,8,.55) 65%,rgba(12,10,8,.3)),linear-gradient(to top,rgba(12,10,8,.75) 0%,transparent 40%)}
+
+/* ─── EQUIP IMAGE ─── */
+.equip-img-wrap{width:100%;height:200px;overflow:hidden;position:relative;background:var(--dark4);display:flex;align-items:center;justify-content:center}
+.equip-img-wrap img{width:100%;height:100%;object-fit:cover;opacity:.88;transition:transform .4s}
+.equip-card:hover .equip-img-wrap img{transform:scale(1.05)}
+.equip-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;height:100%;position:absolute;inset:0}
+.equip-img-placeholder svg{width:44px;height:44px;stroke:var(--orange);fill:none;stroke-width:1.5}
+.equip-img-placeholder span{font-size:11px;color:rgba(250,248,245,.35);text-align:center;padding:0 12px}
+.equip-num-tag{position:absolute;bottom:10px;right:14px;font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;color:rgba(216,90,48,.12);line-height:1;pointer-events:none;user-select:none}
+
+/* ─── MAP IFRAME ─── */
+.map-live{border-radius:20px;overflow:hidden;height:360px;border:1px solid var(--border-light);display:block}
+.map-live iframe{width:100%;height:100%;border:none;display:block}
+
+/* ─── PRE-AGENDA: TIPO DE TRATAMIENTO + DATOS ─── */
+.pretreat-card{width:100%;margin:0 0 24px;background:var(--dark3);border:1px solid var(--border-light);border-radius:24px;padding:30px}
+.pretreat-step{margin-bottom:30px}
+.pretreat-step:last-child{margin-bottom:0}
+.pretreat-step-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.pretreat-step-num{width:26px;height:26px;border-radius:50%;background:rgba(216,90,48,.15);border:1px solid var(--border-orange);color:var(--orange);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pretreat-step-title{font-size:15px;font-weight:500;color:var(--cream)}
+.emoji-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.emoji-opt{display:flex;flex-direction:column;align-items:center;gap:7px;padding:16px 8px;border-radius:16px;background:rgba(250,248,245,.03);border:1px solid var(--border-light);cursor:pointer;transition:all .2s;text-align:center}
+.emoji-opt .emo{font-size:28px;line-height:1}
+.emoji-opt .lbl{font-size:12px;color:var(--text-mid);font-weight:500;line-height:1.3}
+.emoji-opt:hover{border-color:var(--border-orange);transform:translateY(-2px)}
+.emoji-opt.active{background:rgba(216,90,48,.12);border-color:var(--orange)}
+.emoji-opt.active .lbl{color:var(--cream)}
+.sublist-wrap{margin-top:16px;display:none}
+.sublist-wrap.show{display:block}
+.pf-select,.pf-input{width:100%;padding:13px 16px;border-radius:12px;background:rgba(250,248,245,.04);border:1px solid var(--border-light);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+.pf-select:focus,.pf-input:focus{border-color:var(--orange)}
+.pf-select option{background:var(--dark3);color:var(--cream)}
+.chip-label{font-size:12px;color:var(--text-dim);margin-bottom:10px}
+.chip-group{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:100px;background:rgba(250,248,245,.04);border:1px solid var(--border-light);font-size:12.5px;color:var(--text-mid);cursor:pointer;transition:all .18s;user-select:none}
+.chip input{display:none}
+.chip:hover{border-color:var(--border-orange)}
+.chip.active{background:rgba(216,90,48,.15);border-color:var(--orange);color:var(--cream)}
+.chip .chk{width:14px;height:14px;border-radius:4px;border:1.5px solid rgba(250,248,245,.3);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s}
+.chip.active .chk{background:var(--orange);border-color:var(--orange)}
+.chip.active .chk::after{content:'✓';font-size:10px;color:#fff;line-height:1}
+.pf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.pf-row:last-child{margin-bottom:0}
+.pf-field{display:flex;flex-direction:column;gap:6px}
+.pf-field label{font-size:12px;color:var(--text-dim)}
+.pf-field.full{grid-column:1/-1}
+.pretreat-note{font-size:12px;color:var(--text-dim);margin-top:6px;line-height:1.6}
+
+/* ─── MENSAJE CÁLIDO AL PACIENTE (antes de WhatsApp) ─── */
+.pt-thanks-overlay{position:fixed;inset:0;background:rgba(6,5,4,.8);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;animation:ptFadeIn .25s ease}
+@keyframes ptFadeIn{from{opacity:0}to{opacity:1}}
+.pt-thanks-card{background:var(--dark3);border:1px solid var(--border-orange);border-radius:26px;padding:38px 32px;max-width:440px;width:100%;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.55);animation:ptPopIn .3s ease}
+@keyframes ptPopIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.pt-thanks-emoji{font-size:42px;margin-bottom:12px;line-height:1}
+.pt-thanks-title{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;color:var(--cream);margin-bottom:20px}
+.pt-thanks-line{font-size:14px;color:var(--text-mid);margin-bottom:14px;line-height:1.65;text-align:left;display:flex;gap:10px;align-items:flex-start}
+.pt-thanks-line .e{flex-shrink:0;font-size:17px}
+.pt-thanks-btn{width:100%;justify-content:center;margin-top:16px}
+@media(max-width:560px){
+  .emoji-grid{grid-template-columns:repeat(2,1fr)}
+  .pf-row{grid-template-columns:1fr}
+}
+
+/* ─── AGENDA ─── */
+#agenda{background:var(--dark2)}
+.agenda-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-bottom:0}
+.agenda-inner{background:var(--dark3);border:1px solid var(--border-light);border-radius:24px;overflow:hidden}
+.agenda-head{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--border-light)}
+.agenda-month-lbl{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--cream)}
+.agenda-nav{display:flex;gap:8px}
+.agenda-nav button{width:34px;height:34px;border-radius:8px;background:rgba(250,248,245,.06);border:1px solid var(--border-light);color:var(--cream);cursor:pointer;font-size:16px;transition:all .15s;display:flex;align-items:center;justify-content:center}
+.agenda-nav button:hover{background:rgba(216,90,48,.15);border-color:var(--border-orange);color:var(--orange)}
+.cal-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:10px 14px 4px;background:var(--dark4)}
+.cal-dow span{text-align:center;font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--text-dim);padding:3px 0}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;padding:4px 14px 14px}
+.cal-day{min-height:50px;border-radius:8px;padding:5px 3px;text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;gap:3px}
+.cal-day.has-slots{cursor:pointer;transition:background .15s}
+.cal-day.has-slots:hover{background:rgba(0,188,212,.12)}
+.cal-day.busy{background:rgba(216,90,48,.06)}
+.cal-day.avail{background:rgba(0,188,212,.07)}
+.cal-day.today .dnum{background:var(--orange);color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.dnum{font-size:13px;font-weight:500;color:var(--cream);width:24px;height:24px;display:flex;align-items:center;justify-content:center}
+.cal-day.past .dnum{color:rgba(250,248,245,.2)}
+.dpill{font-size:9px;font-weight:500;padding:1px 5px;border-radius:100px;letter-spacing:.03em;line-height:1.4}
+.dpill-avail{background:rgba(0,188,212,.2);color:#80DEEA}
+.dpill-busy{background:rgba(216,90,48,.18);color:var(--orange-light)}
+.cal-legend{display:flex;gap:14px;flex-wrap:wrap;padding:10px 22px;border-top:1px solid var(--border-light);background:var(--dark4)}
+.cl-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-dim)}
+.cl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.slots-panel{border-top:1px solid var(--border-light);padding:16px 22px;display:none}
+.slots-title{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:12px}
+.slots-g{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.slot{padding:10px 6px;border-radius:10px;border:1px solid rgba(0,188,212,.25);background:rgba(0,188,212,.09);color:var(--cream);font-size:12px;font-weight:500;cursor:pointer;text-align:center;transition:all .18s}
+.slot:hover{background:rgba(0,188,212,.25);border-color:#00BCD4;color:#80DEEA;transform:translateY(-1px)}
+.slot:active{transform:scale(.97)}
+.slot.busy{border-color:rgba(216,90,48,.15);background:rgba(216,90,48,.05);color:var(--text-dim);cursor:not-allowed;text-decoration:line-through;font-weight:400}
+.agenda-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;border-top:1px solid var(--border-light);flex-wrap:wrap}
+.agenda-note{font-size:12px;color:var(--text-dim);line-height:1.5}
+.agenda-loading{text-align:center;padding:48px 24px;color:var(--text-dim);font-size:14px}
+.spin{width:32px;height:32px;border:3px solid rgba(0,188,212,.2);border-top-color:#00BCD4;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){
+  .agenda-top{grid-template-columns:1fr;gap:36px}
+  .slots-g{grid-template-columns:repeat(3,1fr)}
+}
+
+
+@media(max-width:700px){
+  #videos-grid{grid-template-columns:1fr!important}
+}
+
+
+
+
+
+
+
+
+/* ════════════ VIDEOS ════════════ */
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:0}
+
+/* Card container */
+.vcard{background:var(--dark3);border:1px solid var(--border-light);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.vcard:hover{border-color:var(--border-orange);transform:translateY(-4px)}
+
+/* Player box — padding-bottom creates the 16:9 ratio, overflow:hidden locks the frame inside */
+.vbox{position:relative;width:100%;padding-bottom:56.25%;background:#000;overflow:hidden;flex-shrink:0}
+
+/* Thumbnail */
+.vthumbnail{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;z-index:1}
+.vcard:hover .vthumbnail{transform:scale(1.03)}
+
+/* Play overlay */
+.vplay-layer{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.08) 55%,rgba(0,0,0,.25) 100%);transition:background .2s}
+.vplay-layer:hover{background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 55%,rgba(0,0,0,.12) 100%)}
+.vpbtn{width:72px;height:72px;border-radius:50%;background:rgba(216,90,48,.9);border:3px solid rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;padding-left:5px;transition:all .22s;box-shadow:0 6px 30px rgba(0,0,0,.55)}
+.vplay-layer:hover .vpbtn{transform:scale(1.12);background:var(--orange);border-color:rgba(255,255,255,.8);box-shadow:0 8px 40px rgba(216,90,48,.65)}
+.vplabel{color:#fff;font-size:13px;font-weight:500;letter-spacing:.06em;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+
+/* YouTube iframe wrapper — fills .vbox completely */
+.vframe-wrap{position:absolute;inset:0;z-index:3;display:none}
+.vframe-wrap iframe{width:100%;height:100%;border:none;display:block}
+
+/* Blocked / error state */
+.vblocked{position:absolute;inset:0;z-index:4;background:rgba(12,10,8,.96);display:flex;align-items:center;justify-content:center}
+.vb-inner{text-align:center;padding:20px 24px}
+.vb-msg{font-size:13px;color:var(--text-mid);line-height:1.6;margin:12px 0 18px}
+.vb-btn{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#111;font-size:14px;font-weight:600;padding:11px 22px;border-radius:10px;text-decoration:none;transition:all .2s}
+.vb-btn:hover{background:#f0f0f0;transform:scale(1.03)}
+
+/* Playing state */
+.vbox.playing .vthumbnail,
+.vbox.playing .vplay-layer{display:none}
+.vbox.playing .vframe-wrap{display:block}
+
+/* Info */
+.vdetail{padding:20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vbrand{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#00BCD4}
+.vtitle{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--cream);line-height:1.1;margin:0}
+.vdesc{font-size:13px;color:var(--text-mid);line-height:1.55;margin:0;flex:1}
+.vtags{display:flex;gap:6px;flex-wrap:wrap}
+.vtags span{font-size:10.5px;padding:3px 10px;border-radius:100px;background:rgba(0,188,212,.1);border:1px solid rgba(0,188,212,.2);color:#80DEEA}
+.vextlink{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--text-dim);transition:color .15s;text-decoration:none;margin-top:4px;width:fit-content}
+.vextlink:hover{color:var(--orange)}
+
+@media(max-width:700px){.vgrid{grid-template-columns:1fr}}
+/* ═══════════════════════════════ */
+
+/* ─── MAP PHOTO ─── */
+.map-photo-link{display:block;text-decoration:none;border-radius:20px;overflow:hidden;border:1px solid var(--border-light);transition:border-color .2s;box-shadow:0 4px 24px rgba(0,0,0,.3)}
+.map-photo-link:hover{border-color:var(--border-orange)}
+.map-photo-wrap{position:relative;aspect-ratio:4/3;background:var(--dark3);overflow:hidden}
+.map-photo-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.map-photo-link:hover .map-photo-img{transform:scale(1.03)}
+.map-photo-fallback{position:absolute;inset:0;background:linear-gradient(135deg,var(--dark3),var(--dark4));align-items:center;justify-content:center}
+.map-fb-inner{text-align:center;padding:24px}
+.map-fb-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--cream);margin:12px 0 6px}
+.map-fb-addr{font-size:14px;color:var(--text-mid);margin-bottom:8px}
+.map-fb-hint{font-size:11px;color:var(--text-dim);border:1px dashed rgba(250,248,245,.15);border-radius:8px;padding:6px 12px;margin-top:12px;display:inline-block}
+.map-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 50%);display:flex;align-items:flex-end;padding:18px;pointer-events:none}
+.map-pin-badge{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;font-size:13px;font-weight:500;padding:8px 16px;border-radius:100px;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.map-photo-link:hover .map-pin-badge{background:var(--orange2)}
+
+</style>
+</head>
+<body>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/50670549299?text=Hola%20PellBella%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-tooltip">¡Escríbenos ahora!</span>
+</a>
+
+<!-- Sticky Nav -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="s-name"><img src="logo-pellbellacr-full.png" alt="PellBella" style="height:40px;display:block"></span>
+  <div class="sticky-cta-btns">
+    <!-- FORMULARIO EVENTO: reemplaza el href="#" de abajo por el link real cuando lo tengas listo -->
+    <a href="#" target="_blank" class="btn btn-outline" style="padding:10px 18px;font-size:13px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      Formulario Evento
+    </a>
+    <a href="https://wa.me/50670549299" target="_blank" class="btn btn-outline" style="padding:10px 18px;font-size:13px">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:15px;height:15px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://siku.io/pellbella" target="_blank" class="btn btn-primary" style="padding:10px 20px;font-size:13px">Agendar cita</a>
+  </div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <!-- VIDEO FONDO: cambia YOUR_FILE_ID por el ID de tu video en Google Drive -->
+  <!-- Obtén el ID: Drive → compartir → copiar enlace → número/letras entre /d/ y /view -->
+  <div class="hero-video-wrap">
+    <iframe class="hero-video-frame"
+      src="https://drive.google.com/file/d/YOUR_FILE_ID/preview"
+      allow="autoplay; fullscreen" frameborder="0" title="PellBella video"></iframe>
+    <div class="hero-video-overlay"></div>
+  </div>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      #1 en Fortalecimiento de Piso Pélvico · Costa Rica
+    </div>
+    <h1 class="hero-h1">
+      Tu cuerpo merece<br>
+      <em>lo mejor.</em>
+      <span class="line2">Tecnología BTL · Sin cirugía · Resultados Reales</span>
+    </h1>
+    <p class="hero-sub">Especialistas en salud íntima, piso pélvico y remodelación corporal con la tecnología BTL más avanzada del mundo. Más de 200 pacientes tratados en Costa Rica.</p>
+    <div class="hero-btns">
+      <a href="https://siku.io/pellbella" target="_blank" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg>
+        Agendar valoración gratuita
+      </a>
+      <a href="https://wa.me/50670549299" target="_blank" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" data-count="200">0</div><div class="lbl">Pacientes tratadas</div></div>
+      <div class="hero-stat"><div class="num" data-count="6">0</div><div class="lbl">Equipos BTL certificados</div></div>
+      <div class="hero-stat"><div class="num" data-count="95">0</div><div class="lbl">% satisfacción clínica</div></div>
+      <div class="hero-stat"><div class="num" data-count="70">0</div><div class="lbl">Países avalan BTL</div></div>
+    </div>
+  </div>
+  <!-- Floating equipment card -->
+  <div class="hero-float" style="animation:floatY 4s ease-in-out infinite">
+    <div class="hero-float-card">
+      <div class="fc-tag">Equipos disponibles hoy</div>
+      <div class="fc-equip">
+        <div class="equip-pill">
+          <div class="equip-pill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+          <div><div class="equip-pill-name">BTL EMSELLA</div><div class="equip-pill-sub">Piso pélvico · 22,000 contracciones · Incontinencia · Mejora la salud sexual /sesión</div></div>
+        </div>
+        <div class="equip-pill">
+          <div class="equip-pill-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <div><div class="equip-pill-name">BTL EMSCULPT</div><div class="equip-pill-sub">Músculo + reducción grasa · HIFEM</div></div>
+        </div>
+        <div class="equip-pill">
+          <div class="equip-pill-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="equip-pill-name">BTL EXILIS ULTRA 360</div><div class="equip-pill-sub">Flacidez · Grasa lozalizada · Celulitis · Rejuvenecimiento Vaginal · RF + Ultrasonido</div></div>
+        </div>
+        <div class="equip-pill">
+          <div class="equip-pill-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="equip-pill-name">BTL EXILITE</div><div class="equip-pill-sub">Rejuvenecimiento facial · Manchas de piel · Rosácea · Depilación · Luz Pulsada</div></div>
+        </div>
+        <div class="equip-pill">
+          <div class="equip-pill-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="equip-pill-name">BTL LYMPHASTIM</div><div class="equip-pill-sub">Mejora la eliminación de Grasas · Mejora la circulación · Tratamiento para Edemas · Piernas cansadas · Presoterapia Mecanica Avanzada para Drenar</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Conoce más</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ══ -->
+<section id="trust">
+  <div class="trust-inner">
+    <div class="trust-item reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      <span>Equipos Aprobados por FDA</span>
+    </div>
+    <div class="trust-item reveal delay-1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/><circle cx="12" cy="12" r="9"/></svg>
+      <span>+70 países avalan BTL</span>
+    </div>
+    <div class="trust-item reveal delay-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      <span>Respaldo clínico internacional</span>
+    </div>
+    <div class="trust-item reveal delay-3">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+      <span>Convenio con especialistas</span>
+    </div>
+    <div class="trust-item reveal delay-4">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+      <span>Sin cirugía · Sin recuperación</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal-left">
+        <div class="about-img-wrap">
+          <div class="about-img-frame">
+            <img src="maxima-seguridad-btl-poster.jpg" alt="Máxima seguridad con BTL" style="width:100%;height:100%;object-fit:cover">
+          </div>
+          <div class="about-badge">
+            <div class="ab-num">+5</div>
+            <div class="ab-txt">años de<br>experiencia</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <span class="tag">Sobre PellBella</span>
+        <h2 class="section-title">Una clínica diseñada para <em style="font-style:italic;color:var(--orange)">tu bienestar real</em></h2>
+        <p class="section-sub" style="margin-bottom:24px">PellBella nació de un sueño familiar: ofrecer soluciones reales y seguras a pacientes que buscan mejorar su calidad de vida. Trabajamos con la tecnología BTL —la marca #1 mundial en estética médica— para darte resultados visibles, sin cirugía y sin riesgo.</p>
+        <div class="about-card">
+          <div class="ac-title">¿Por qué elegir PellBella?</div>
+          <div class="ac-list">
+            <div class="ac-item">Equipos BTL certificados, los mismos usados en hospitales internacionales y en clínicas de gran prestigio</div>
+            <div class="ac-item">Convenio con especialistas para atender Valoraciones e Indicaciones</div>
+            <div class="ac-item">Protocolo clínico personalizado para cada paciente</div>
+            <div class="ac-item">Sin cirugía, sin dolor, sin tiempo de recuperación</div>
+            <div class="ac-item">Resultados visibles desde la primera sesión</div>
+          </div>
+        </div>
+        <div class="jennifer-box">
+          <div class="jennifer-avatar">JM</div>
+          <div class="jennifer-info">
+            <div class="ji-name">Jennifer Madrigal</div>
+            <div class="ji-title">Directora · PellBella Clínica Estética</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUIERO ANALIZAR MIS RESULTADOS ══ -->
+<section id="analisis">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <span class="tag reveal" style="justify-content:center">Participa y gana</span>
+      <h2 class="section-title reveal" style="text-align:center">EVENTOS <em style="font-style:italic;color:var(--orange)">PARA TI</em></h2>
+    </div>
+    <div class="analisis-grid">
+
+      <!-- 1/3 — Imagen: primera fila concatenada (ancho completo), el resto en grilla de 2 columnas -->
+      <div class="analisis-img-col reveal-left">
+        <div class="analisis-img-bg" style="background-image:url('maxima-seguridad-btl-poster.jpg')"></div>
+        <div class="analisis-img-row full"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+        <div class="analisis-img-row"></div>
+      </div>
+
+      <!-- 2/3 — Formulario -->
+      <div class="analisis-card reveal-right">
+        <span class="tag" style="margin-bottom:14px">Evento especial</span>
+        <h2 class="section-title" style="font-size:clamp(26px,3.4vw,36px);margin-bottom:10px">QUIERO ANALIZAR MIS RESULTADOS</h2>
+        <p class="section-sub" style="margin-bottom:28px;max-width:100%">Completa tus datos para recibir el análisis de tu piel/cuerpo hecho con tecnología BTL.</p>
+
+        <form id="analisisForm">
+          <div class="pf-row">
+            <div class="pf-field full">
+              <label for="anNombre">Nombre completo *</label>
+              <input class="pf-input" type="text" id="anNombre" required>
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-field">
+              <label for="anApellido1">Primer apellido *</label>
+              <input class="pf-input" type="text" id="anApellido1" required>
+            </div>
+            <div class="pf-field">
+              <label for="anApellido2">Segundo apellido</label>
+              <input class="pf-input" type="text" id="anApellido2">
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-field">
+              <label for="anIdentidad">Número de identidad *</label>
+              <input class="pf-input" type="text" id="anIdentidad" required>
+            </div>
+            <div class="pf-field">
+              <label for="anTelefono">Número de teléfono *</label>
+              <input class="pf-input" type="tel" id="anTelefono" required>
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-field full">
+              <label for="anEmail">Correo electrónico *</label>
+              <input class="pf-input" type="email" id="anEmail" required>
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-field full">
+              <label for="anDireccion">Dirección</label>
+              <input class="pf-input" type="text" id="anDireccion">
+            </div>
+          </div>
+          <div class="pf-row">
+            <div class="pf-field full">
+              <label for="anCupon">Código de cupón evento</label>
+              <input class="pf-input" type="text" id="anCupon" placeholder="Opcional">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:10px">
+            Analizar mis resultados
+          </button>
+        </form>
+
+        <!-- Redes sociales -->
+        <div class="analisis-social-row">
+          <div class="analisis-social-icons">
+            <a href="https://wa.me/50670549299" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="#25D166" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/pellbellacr" target="_blank" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#C13584" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke-width="2.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/PellBellaCr" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://m.me/PellBellaCr" target="_blank" aria-label="Messenger">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="#006AFF"><path d="M12 0C5.373 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.975 12-11.111S18.627 0 12 0zm1.194 14.963l-3.055-3.26-5.963 3.26L10.732 8.3l3.131 3.259L19.752 8.3l-6.558 6.663z"/></svg>
+            </a>
+          </div>
+          <div class="analisis-social-text">Síguenos en nuestras redes y gana premios especializados para ti. 🎁</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EQUIPMENT ══ -->
+<section id="equipment">
+  <div class="container">
+    <span class="tag reveal">Tecnología de vanguardia</span>
+    <div style="display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:0">
+      <h2 class="section-title reveal">Equipos BTL <em style="font-style:italic;color:var(--orange)">certificados</em></h2>
+      <p class="section-sub reveal delay-1" style="font-size:14px;max-width:360px">Los mismos equipos usados en clínicas especializadas de Estados Unidos, Europa y más de 70 países.</p>
+    </div>
+    <div class="equip-grid">
+
+      <div class="equip-card reveal delay-1">
+        <!-- Sube emsella.jpg junto al HTML en GitHub -->
+        <div class="equip-img-wrap">
+          <img src="emsella.jpg" alt="BTL EMSELLA"
+            onerror="this.parentNode.innerHTML='<div class=equip-img-placeholder><svg viewBox=\'0 0 24 24\'><circle cx=\'12\' cy=\'12\' r=\'3\'/><path d=\'M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42\'/></svg><span>emsella.jpg</span></div><span class=equip-num-tag>01</span>'">
+          <span class="equip-num-tag">01</span>
+        </div>
+        <div class="equip-body">
+          <div class="equip-brand">BTL · Piso Pélvico</div>
+          <div class="equip-name">EMSELLA</div>
+          <div class="equip-desc">La silla terapéutica que fortalece el piso pélvico completo sin desvestirse con resultados en pocas sesiones. Usa tecnología HIFEM para inducir contracciones supramáximas imposibles de lograr con ejercicio.</div>
+          <div class="equip-specs">
+            <div class="spec-row"><span class="spec-label">Contracciones por sesión</span><span class="spec-val">22,000</span></div>
+            <div class="spec-row"><span class="spec-label">Duración</span><span class="spec-val">30 minutos</span></div>
+            <div class="spec-row"><span class="spec-label">Tecnología</span><span class="spec-val">HIFEM focalizado</span></div>
+            <div class="spec-row"><span class="spec-label">Aprobación</span><span class="spec-val">FDA </span></div>
+          </div>
+          <span class="equip-tag">Incontinencia · Vida sexual · Postparto</span>
+        </div>
+      </div>
+
+      <div class="equip-card reveal delay-2">
+        <!-- Sube emsculpt.jpg junto al HTML en GitHub -->
+        <div class="equip-img-wrap">
+          <img src="emsculpt.jpg" alt="BTL EMSCULPT"
+            onerror="this.parentNode.innerHTML='<div class=equip-img-placeholder><svg viewBox=\'0 0 24 24\'><path d=\'M13 10V3L4 14h7v7l9-11h-7z\'/></svg><span>emsculpt.jpg</span></div><span class=equip-num-tag>02</span>'">
+          <span class="equip-num-tag">02</span>
+        </div>
+        <div class="equip-body">
+          <div class="equip-brand">BTL · Cuerpo</div>
+          <div class="equip-name">EMSCULPT</div>
+          <div class="equip-desc">Única tecnología que elimina grasa y tonifica músculo simultáneamente en una misma sesión. Combina HIFEM de alta intensidad reduciendo medidas y fortaleciendo el músculo.</div>
+          <div class="equip-specs">
+            <div class="spec-row"><span class="spec-label">Contracciones</span><span class="spec-val">20,000 / sesión</span></div>
+            <div class="spec-row"><span class="spec-label">Reducción grasa</span><span class="spec-val">30% promedio</span></div>
+            <div class="spec-row"><span class="spec-label">Ganancia muscular</span><span class="spec-val">25% promedio</span></div>
+            <div class="spec-row"><span class="spec-label">Tecnología</span><span class="spec-val">HIFEM + RF</span></div>
+          </div>
+          <span class="equip-tag">Abdomen · Glúteos · Brazos · Diástasis</span>
+        </div>
+      </div>
+
+      <div class="equip-card reveal delay-3">
+        <!-- Sube exilis.jpg junto al HTML en GitHub -->
+        <div class="equip-img-wrap">
+          <img src="exilis.jpg" alt="BTL EXILIS ULTRA 360"
+            onerror="this.parentNode.innerHTML='<div class=equip-img-placeholder><svg viewBox=\'0 0 24 24\'><path d=\'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\'/></svg><span>exilis.jpg</span></div><span class=equip-num-tag>03</span>'">
+          <span class="equip-num-tag">03</span>
+        </div>
+        <div class="equip-body">
+          <div class="equip-brand">BTL · Reducción y Tensado</div>
+          <div class="equip-name">EXILIS ULTRA 360</div>
+          <div class="equip-desc">Radiofrecuencia monopolar + ultrasonido focalizado para tratar flacidez, celulitis y remodelación corporal en cualquier área del cuerpo, incluyendo rostro, cuello y zona intima.</div>
+          <div class="equip-specs">
+            <div class="spec-row"><span class="spec-label">Tecnología</span><span class="spec-val">RF + Ultrasonido</span></div>
+            <div class="spec-row"><span class="spec-label">Profundidad</span><span class="spec-val">Dérmica y Subdérmica</span></div>
+            <div class="spec-row"><span class="spec-label">Zonas</span><span class="spec-val">Cuerpo, Rostro y Vaginal</span></div>
+            <div class="spec-row"><span class="spec-label">Dolor</span><span class="spec-val">Sin Dolor</span></div>
+          </div>
+          <span class="equip-tag">Flacidez · Celulitis · Tensado · Rejuvenecimiento · Cuerpo, Rostro y zona íntima</span>
+        </div>
+      </div>
+
+      <div class="equip-card reveal delay-4">
+        <!-- Sube exilite.jpg junto al HTML en GitHub -->
+        <div class="equip-img-wrap">
+          <img src="exilite.jpg" alt="EXILITE"
+            onerror="this.parentNode.innerHTML='<div class=equip-img-placeholder><span>exilite.jpg</span></div><span class=equip-num-tag>04</span>'">
+          <span class="equip-num-tag">04</span>
+        </div>
+        <div class="equip-body">
+          <div class="equip-brand">BTL · Rejuvenecimiento</div>
+          <div class="equip-name">EXILITE</div>
+          <div class="equip-desc">Luz pulsada intensa de ultima generación, Manchas, acné, rosácea, lesiones vasculares, depilación, facial y coporal.</div>
+          <div class="equip-specs">
+            <div class="spec-row"><span class="spec-label">Tecnología</span><span class="spec-val">Luz Pulsada</span></div>
+            <div class="spec-row"><span class="spec-label">Profundidad</span><span class="spec-val">Dérmica</span></div>
+            <div class="spec-row"><span class="spec-label">Zonas</span><span class="spec-val">Cuerpo y Rostro</span></div>
+            <div class="spec-row"><span class="spec-label">Dolor</span><span class="spec-val">Sin Dolor</span></div>
+          </div>
+          <span class="equip-tag">Rejuvenecimiento · Flacidez · Luminocidad · Textura de la piel · Rosácea · Cuerpo, Rostro y zona íntima</span>
+        </div>
+      </div>
+
+      <div class="equip-card reveal delay-5">
+        <!-- Sube lymphastim.jpg junto al HTML en GitHub -->
+        <div class="equip-img-wrap">
+          <img src="lymphastim.jpg" alt="LYMPHASTIM"
+            onerror="this.parentNode.innerHTML='<div class=equip-img-placeholder><span>lymphastim.jpg</span></div><span class=equip-num-tag>05</span>'">
+          <span class="equip-num-tag">05</span>
+        </div>
+        <div class="equip-body">
+          <div class="equip-brand">BTL · Drenaje Linfático</div>
+          <div class="equip-name">LYMPHASTIM</div>
+          <div class="equip-desc">Drenaje por medio de compartimentos automáticos para tratar Edemas, Obstrucción posquirurgica de los vasos linfáticos, insuficiencia venosa, enfermedad isquémica, prevención de trombosis venosa profunda, piernas cansadas, mejora la circulación.</div>
+          <div class="equip-specs">
+            <div class="spec-row"><span class="spec-label">Tecnología</span><span class="spec-val">RF + Ultrasonido</span></div>
+            <div class="spec-row"><span class="spec-label">Profundidad</span><span class="spec-val">Dérmica y Subdérmica</span></div>
+            <div class="spec-row"><span class="spec-label">Zonas</span><span class="spec-val">Cuerpo, Rostro y Vaginal</span></div>
+            <div class="spec-row"><span class="spec-label">Dolor</span><span class="spec-val">Sin Dolor</span></div>
+          </div>
+          <span class="equip-tag">Circulación · Drenaje linfático · Edemas · Celulitis</span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="container">
+    <div class="services-intro">
+      <div class="reveal-left">
+        <span class="tag">Nuestros servicios</span>
+        <h2 class="section-title">Todo lo que <em style="font-style:italic;color:var(--orange)">necesitas</em> en un solo lugar</h2>
+      </div>
+      <div class="reveal-right">
+        <p class="section-sub">Desde tratamientos de alta tecnología hasta cuidados estéticos integrales. Cada servicio es diseñado para darte resultados reales y duraderos.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal delay-1"><div class="svc-icon">🦾</div><div class="svc-name">Piso Pélvico</div><div class="svc-desc">EMSELLA · Incontinencia, fortalecimiento y rehabilitación</div></div>
+      <div class="svc-card reveal delay-2"><div class="svc-icon">⚡</div><div class="svc-name">Tonificación Muscular</div><div class="svc-desc">EMSCULPT · Masa muscular y definición corporal</div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon">🔥</div><div class="svc-name">Reducción de Grasa</div><div class="svc-desc">Eliminación de grasa localizada sin cirugía</div></div>
+      <div class="svc-card reveal delay-4"><div class="svc-icon">✨</div><div class="svc-name">Rejuvenecimiento</div><div class="svc-desc">EXILIS | EXILITE · Flacidez facial y corporal, Luminosidad, aclarado y definifición</div></div>
+      <div class="svc-card reveal delay-1"><div class="svc-icon">💉</div><div class="svc-name">Terapias Faciales y Corporales</div><div class="svc-desc">Nutrición cutánea y subcutánea con cócteles vitamínicos</div></div>
+      <div class="svc-card reveal delay-2"><div class="svc-icon">🌊</div><div class="svc-name">Drenaje Linfático</div><div class="svc-desc">Reducción de inflamación, retención de líquidos y favorece la eliminación de la grasa tratada</div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon">🌸</div><div class="svc-name">Skincare</div><div class="svc-desc">Limpiezas faciales avanzadas y tratamientos especializados para la piel</div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon">🌸</div><div class="svc-name">Depilación</div><div class="svc-desc">Depilación con láser Diodo, mejora la apariencia de la piel y aclarado de la zona tratada</div></div>
+      <div class="svc-card reveal delay-3"><div class="svc-icon">🌸</div><div class="svc-name">Alopecia</div><div class="svc-desc">Mejora el crecimiento y el grosor del cabello</div></div>
+      <div class="svc-card reveal delay-4"><div class="svc-icon">🏥</div><div class="svc-name">Post-Operatorio</div><div class="svc-desc">Recuperación y optimización de resultados quirúrgicos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="results">
+  <div class="container">
+    <div class="results-intro">
+      <div class="reveal-left">
+        <span class="tag">Resultados comprobados</span>
+        <h2 class="section-title">Casos <em style="font-style:italic;color:var(--orange)">reales.</em><br>Cambios reales.</h2>
+      </div>
+      <div class="reveal-right">
+        <p class="section-sub">Más de 200 pacientes han transformado su calidad de vida con nuestros protocolos clínicos. Estos son algunos de sus resultados.</p>
+      </div>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal delay-1">
+        <div class="result-img">
+          <div class="result-before-after">
+            <div class="result-side" style="background:rgba(92,74,61,.4)">
+              <img src="Incontinencia_antes.png" alt="Antes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">😔</span>
+              <span class="result-side-label label-antes">Antes</span>
+            </div>
+            <div class="result-side" style="background:rgba(0,188,212,.12)">
+              <img src="Incontinencia_despues.png" alt="Después" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">😊</span>
+              <span class="result-side-label label-despues">Después</span>
+            </div>
+          </div>
+          <div class="result-divider-line"></div>
+        </div>
+        <div class="result-body">
+          <div class="result-condition">Piso Pélvico · EMSELLA</div>
+          <div class="result-title">Incontinencia severa postparto</div>
+          <div class="result-detail">Paciente de 34 años. Después de 6 sesiones de EMSELLA eliminó los escapes por completo. Retomó el ejercicio y la vida social sin restricciones.</div>
+          <div class="result-pills"><span class="result-pill">6 sesiones</span><span class="result-pill">100% sin escapes</span><span class="result-pill">Postparto</span></div>
+        </div>
+      </div>
+      <div class="result-card reveal delay-2">
+        <div class="result-img">
+          <div class="result-before-after">
+            <div class="result-side" style="background:rgba(92,74,61,.4)">
+              <img src="Diastasis_antes.png" alt="Antes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">😤</span>
+              <span class="result-side-label label-antes">Antes</span>
+            </div>
+            <div class="result-side" style="background:rgba(0,188,212,.12)">
+              <img src="Diastasis_despues.png" alt="Después" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">💪</span>
+              <span class="result-side-label label-despues">Después</span>
+            </div>
+          </div>
+          <div class="result-divider-line"></div>
+        </div>
+        <div class="result-body">
+          <div class="result-condition">Cuerpo · EMSCULPT</div>
+          <div class="result-title">Diástasis abdominal + remodelación</div>
+          <div class="result-detail">Paciente de 29 años con diástasis post-parto. 4 sesiones de EMSCULPT NEO. Recuperación muscular completa y reducción de grasa abdominal del 28%.</div>
+          <div class="result-pills"><span class="result-pill">4 sesiones</span><span class="result-pill">-28% grasa</span><span class="result-pill">Diástasis</span></div>
+        </div>
+      </div>
+      <div class="result-card reveal delay-3">
+        <div class="result-img">
+          <div class="result-before-after">
+            <div class="result-side" style="background:rgba(92,74,61,.4)">
+              <img src="Flacidez_antes.png" alt="Antes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">😟</span>
+              <span class="result-side-label label-antes">Antes</span>
+            </div>
+            <div class="result-side" style="background:rgba(0,188,212,.12)">
+              <img src="Flacidez_despues.png" alt="Después" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+              <span class="result-icon" style="display:none">✨</span>
+              <span class="result-side-label label-despues">Después</span>
+            </div>
+          </div>
+          <div class="result-divider-line"></div>
+        </div>
+        <div class="result-body">
+          <div class="result-condition">Flacidez · EXILIS ULTRA 360</div>
+          <div class="result-title">Flacidez de brazos y abdomen</div>
+          <div class="result-detail">Paciente de 52 años. 8 sesiones de EXILIS ULTRA 360 en brazos y abdomen. Tensado visible desde la tercera sesión. Sin dolor, sin tiempo de recuperación.</div>
+          <div class="result-pills"><span class="result-pill">8 sesiones</span><span class="result-pill">Tensado visible</span><span class="result-pill">Sin dolor</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section id="process">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0">
+      <span class="tag reveal" style="justify-content:center">Así funciona</span>
+      <h2 class="section-title reveal" style="text-align:center">Tu camino hacia <em style="font-style:italic;color:var(--orange)">el cambio</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal delay-1">
+        <div class="ps-num">1</div>
+        <div class="ps-title">Valoración gratuita</div>
+        <div class="ps-desc">Agenda una consulta sin costo ahora. Evaluamos tu caso y te explicamos qué tecnología y protocolo es ideal para ti.</div>
+      </div>
+      <div class="process-step reveal delay-2">
+        <div class="ps-num">2</div>
+        <div class="ps-title">Protocolo personalizado</div>
+        <div class="ps-desc">Diseñamos un plan de tratamiento específico para tu condición, objetivos y estilo de vida.</div>
+      </div>
+      <div class="process-step reveal delay-3">
+        <div class="ps-num">3</div>
+        <div class="ps-title">Sesiones sin dolor</div>
+        <div class="ps-desc">Cada sesión toma 20–60 min. Te vas caminando, sin recuperación, lista para seguir tu día.</div>
+      </div>
+      <div class="process-step reveal delay-4">
+        <div class="ps-num">4</div>
+        <div class="ps-title">Resultados Reales</div>
+        <div class="ps-desc">Monitoreamos tu progreso y ajustamos el protocolo para maximizar cada resultado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS BANNER ══ -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal delay-1"><div class="stat-num" data-count="200">0</div><div class="stat-label">Pacientes tratadas</div></div>
+    <div class="stat-item reveal delay-2"><div class="stat-num" data-count="95">0</div><div class="stat-label">% de satisfacción</div></div>
+    <div class="stat-item reveal delay-3"><div class="stat-num" data-count="6">0</div><div class="stat-label">Equipos BTL certificados</div></div>
+    <div class="stat-item reveal delay-4"><div class="stat-num" data-count="70">0</div><div class="stat-label">Países avalan BTL</div></div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Además contamos con otros equipos que ayudarán a complementar tu tratamiento</span>
+      <span>Además contamos con otros equipos que ayudarán a complementar tu tratamiento</span>
+      <span>Además contamos con otros equipos que ayudarán a complementar tu tratamiento</span>
+      <span>Además contamos con otros equipos que ayudarán a complementar tu tratamiento</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials">
+  <div class="container">
+    <span class="tag reveal">Lo que dicen nuestras pacientes</span>
+    <h2 class="section-title reveal">Ellas ya <em style="font-style:italic;color:var(--orange)">cambiaron</em><br>su vida</h2>
+  </div>
+  <div style="max-width:1100px;margin:40px auto 0;padding:0 24px">
+    <div class="testi-track">
+      <div class="testi-card reveal">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">Después de dos partos pensé que nunca volvería a reírme sin preocuparme. No quería consultar tratamientos en especial porque no quería tener que desvestirme. En PellBella me explicaron que el tratamiento es con ropa ligera y solo debía sentarme en EMSella. Después de 5 sesiones de EMSELLA, mi vida cambió por completo.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div><div class="testi-name">María A.</div><div class="testi-detail">34 años · Piso pélvico</div><span class="testi-tag">EMSELLA</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal delay-1">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">Tenía mucho miedo de ir a una clínica. El equipo de PellBella me explicó todo con calma y paciencia. Desde la segunda sesión noté diferencia real en mi abdomen.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">C</div>
+          <div><div class="testi-name">Carolina V.</div><div class="testi-detail">41 años · Remodelación corporal</div><span class="testi-tag">EMSCULPT</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal delay-2">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">Lo que más me sorprendió es que el tratamiento es sin dolor y sin recuperación. Fui en la hora de almuerzo y seguí trabajando normalmente. Mis brazos quedaron increíbles.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div><div class="testi-name">Andrea L.</div><div class="testi-detail">52 años · Flacidez</div><span class="testi-tag">EXILIS ULTRA</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal delay-3">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">No sabía que existía una solución sin cirugía para la incontinencia. Llevaba 3 años usando protectores todos los días. Hoy ya no necesito ninguno. Es un milagro para mí.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div><div class="testi-name">Patricia R.</div><div class="testi-detail">58 años · Incontinencia</div><span class="testi-tag">EMSELLA</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal delay-4">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">Vine por el piso pélvico y terminé haciéndome también el EMSCULPT. La tecnología es impresionante y los resultados hablan solos. Recomiendo PellBella a familiares y amigos.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div><div class="testi-name">Lucía M.</div><div class="testi-detail">38 años · Tratamiento combinado</div><span class="testi-tag">Combinado</span></div>
+        </div>
+        </div>
+        <div class="testi-card reveal delay-5">
+        <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
+        <div class="testi-quote">He logrado los mejores resultados de Reducción en mis Brazos y lo mejor es que no quede con Flacidez. En PellBella me dieron un mejor diagnostico, ajustaron el protocolo con el mejor tratamiento y ahora uso blusas, vestidos y abrigos que antes no lograba usar. Recomiendo PellBella y sigo tratando otras áreas más.</div>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div><div class="testi-name">Lucía M.</div><div class="testi-detail">36 años · Tratamiento combinado EMSculpt+Exilis</div><span class="testi-tag">Combinado</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ VIDEOS ══ -->
+<section id="videos" style="background:var(--dark);padding:90px 24px">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <span class="tag reveal" style="justify-content:center;display:inline-flex">Tecnología en acción</span>
+      <h2 class="section-title reveal" style="text-align:center">Conoce nuestros <em style="font-style:italic;color:var(--orange)">equipos</em></h2>
+      <p class="reveal delay-1" style="font-size:15px;color:var(--text-mid);max-width:540px;margin:12px auto 0">Haz clic en reproducir — el video se abre dentro de la tarjeta. También puedes verlo en YouTube.</p>
+    </div>
+
+    <div class="vgrid">
+
+      <!-- EMSCULPT -->
+      <div class="vcard reveal delay-1" data-vid="iTuHxaBVcyU" data-key="A">
+        <div class="vbox" id="vbox-A">
+
+          <!-- Estado 1: Thumbnail + Play -->
+          <img class="vthumbnail" id="vthumb-A"
+            src="https://img.youtube.com/vi/iTuHxaBVcyU/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/iTuHxaBVcyU/hqdefault.jpg'" alt="EMSCULPT BTL" loading="lazy">
+          <div class="vplay-layer" id="vpl-A" onclick="playVid('A','iTuHxaBVcyU')">
+            <div class="vpbtn" aria-label="Reproducir video">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="vplabel">▶ Reproducir</span>
+          </div>
+
+          <!-- Estado 2: Iframe YouTube (cuando funciona) -->
+          <div id="vframe-A" class="vframe-wrap"></div>
+
+          <!-- Estado 3: Bloqueado — muestra aviso elegante -->
+          <div class="vblocked" id="vblocked-A" style="display:none">
+            <div class="vb-inner">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#D85A30" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              <p class="vb-msg">El video no puede cargarse en este sitio.<br>Míralo directamente en YouTube.</p>
+              <a href="https://youtu.be/iTuHxaBVcyU" target="_blank" rel="noopener" class="vb-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="vdetail">
+          <span class="vbrand">BTL · Cuerpo</span>
+          <h3 class="vtitle">EMSCULPT</h3>
+          <p class="vdesc">Elimina grasa y tonifica músculo simultáneamente con HIFEM. 20,000 contracciones en 30 minutos sin cirugía.</p>
+          <div class="vtags"><span>Abdomen</span><span>Glúteos</span><span>Brazos</span></div>
+          <a class="vextlink" href="https://youtu.be/iTuHxaBVcyU" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+            Ver en YouTube ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- VANQUISH ME -->
+      <div class="vcard reveal delay-2" data-vid="kfPHrolDtJA" data-key="B">
+        <div class="vbox" id="vbox-B">
+
+          <!-- Estado 1: Thumbnail + Play -->
+          <img class="vthumbnail" id="vthumb-B"
+            src="https://img.youtube.com/vi/kfPHrolDtJA/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/kfPHrolDtJA/hqdefault.jpg'" alt="VANQUISH ME BTL" loading="lazy">
+          <div class="vplay-layer" id="vpl-B" onclick="playVid('B','kfPHrolDtJA')">
+            <div class="vpbtn" aria-label="Reproducir video">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="vplabel">▶ Reproducir</span>
+          </div>
+
+          <!-- Estado 2: Iframe YouTube (cuando funciona) -->
+          <div id="vframe-B" class="vframe-wrap"></div>
+
+          <!-- Estado 3: Bloqueado — muestra aviso elegante -->
+          <div class="vblocked" id="vblocked-B" style="display:none">
+            <div class="vb-inner">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#D85A30" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              <p class="vb-msg">El video no puede cargarse en este sitio.<br>Míralo directamente en YouTube.</p>
+              <a href="https://youtu.be/kfPHrolDtJA" target="_blank" rel="noopener" class="vb-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="vdetail">
+          <span class="vbrand">BTL · Reducción</span>
+          <h3 class="vtitle">VANQUISH ME</h3>
+          <p class="vdesc">Radiofrecuencia selectiva sin contacto para reducción de grasa en grandes áreas. Indoloro y sin recuperación.</p>
+          <div class="vtags"><span>Abdomen</span><span>Muslos</span><span>Sin contacto</span></div>
+          <a class="vextlink" href="https://youtu.be/kfPHrolDtJA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+            Ver en YouTube ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- EXILIS ULTRA 360 -->
+      <div class="vcard reveal delay-3" data-vid="MUsCYCSyxNk" data-key="C">
+        <div class="vbox" id="vbox-C">
+
+          <!-- Estado 1: Thumbnail + Play -->
+          <img class="vthumbnail" id="vthumb-C"
+            src="https://img.youtube.com/vi/MUsCYCSyxNk/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/MUsCYCSyxNk/hqdefault.jpg'" alt="EXILIS ULTRA 360 BTL" loading="lazy">
+          <div class="vplay-layer" id="vpl-C" onclick="playVid('C','MUsCYCSyxNk')">
+            <div class="vpbtn" aria-label="Reproducir video">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="vplabel">▶ Reproducir</span>
+          </div>
+
+          <!-- Estado 2: Iframe YouTube (cuando funciona) -->
+          <div id="vframe-C" class="vframe-wrap"></div>
+
+          <!-- Estado 3: Bloqueado — muestra aviso elegante -->
+          <div class="vblocked" id="vblocked-C" style="display:none">
+            <div class="vb-inner">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#D85A30" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              <p class="vb-msg">El video no puede cargarse en este sitio.<br>Míralo directamente en YouTube.</p>
+              <a href="https://youtu.be/MUsCYCSyxNk" target="_blank" rel="noopener" class="vb-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="vdetail">
+          <span class="vbrand">BTL · Rejuvenecimiento</span>
+          <h3 class="vtitle">EXILIS ULTRA 360</h3>
+          <p class="vdesc">Radiofrecuencia + ultrasonido focalizado para flacidez, celulitis y rejuvenecimiento facial y corporal.</p>
+          <div class="vtags"><span>Flacidez</span><span>Celulitis</span><span>Rostro</span></div>
+          <a class="vextlink" href="https://youtu.be/MUsCYCSyxNk" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+            Ver en YouTube ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- EMSELLA -->
+      <div class="vcard reveal delay-4" data-vid="uaX_bG5FHnk" data-key="D">
+        <div class="vbox" id="vbox-D">
+
+          <!-- Estado 1: Thumbnail + Play -->
+          <img class="vthumbnail" id="vthumb-D"
+            src="https://img.youtube.com/vi/uaX_bG5FHnk/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/uaX_bG5FHnk/hqdefault.jpg'" alt="EMSELLA BTL" loading="lazy">
+          <div class="vplay-layer" id="vpl-D" onclick="playVid('D','uaX_bG5FHnk')">
+            <div class="vpbtn" aria-label="Reproducir video">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="vplabel">▶ Reproducir</span>
+          </div>
+
+          <!-- Estado 2: Iframe YouTube (cuando funciona) -->
+          <div id="vframe-D" class="vframe-wrap"></div>
+
+          <!-- Estado 3: Bloqueado — muestra aviso elegante -->
+          <div class="vblocked" id="vblocked-D" style="display:none">
+            <div class="vb-inner">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#D85A30" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+              <p class="vb-msg">El video no puede cargarse en este sitio.<br>Míralo directamente en YouTube.</p>
+              <a href="https://youtu.be/uaX_bG5FHnk" target="_blank" rel="noopener" class="vb-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="vdetail">
+          <span class="vbrand">BTL · Piso Pélvico</span>
+          <h3 class="vtitle">EMSELLA</h3>
+          <p class="vdesc">La silla terapéutica que fortalece el piso pélvico con 22,000 contracciones por sesión. Sin desvestirse ni dolor.</p>
+          <div class="vtags"><span>Incontinencia</span><span>Postparto</span><span>Vida sexual</span></div>
+          <a class="vextlink" href="https://youtu.be/uaX_bG5FHnk" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="#ff0000"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5S4.5 3.5 2.6 4.1A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg>
+            Ver en YouTube ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- MÁXIMA SEGURIDAD CON BTL — usando el video propio (mp4) hasta que subas el video a YouTube -->
+      <div class="vcard reveal delay-5" data-key="E">
+        <div class="vbox" id="vbox-E" style="padding-bottom:125%">
+          <video src="maxima-seguridad-btl.mp4" poster="maxima-seguridad-btl-poster.jpg" controls playsinline preload="metadata"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000"></video>
+        </div>
+        <div class="vdetail">
+          <span class="vbrand">BTL · Seguridad</span>
+          <h3 class="vtitle">Máxima seguridad con BTL</h3>
+          <p class="vdesc">Conoce los estándares de seguridad clínica detrás de cada equipo BTL que usamos en PellBella.</p>
+          <div class="vtags"><span>Seguridad</span><span>Certificación FDA</span></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="reveal" style="text-align:center;margin-top:48px;padding-top:44px;border-top:1px solid var(--border-light)">
+      <p style="font-size:15px;color:var(--text-mid);margin-bottom:20px">¿Quieres saber cuál tratamiento es el indicado para ti?</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="https://siku.io/pellbella" target="_blank" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Agendar valoración gratuita
+        </a>
+        <a href="https://wa.me/50670549299?text=Vi%20los%20videos%20de%20PellBella%20y%20quiero%20saber%20qu%C3%A9%20tratamiento%20me%20recomienden" target="_blank" class="btn btn-outline">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ LOCATION ══ -->
+<section id="location">
+  <div class="container">
+    <span class="tag reveal">Encuéntranos</span>
+    <div class="location-grid">
+      <div class="reveal-left">
+        <h2 class="section-title">Visítanos en <em style="font-style:italic;color:var(--orange)">Curridabat</em></h2>
+        <p class="section-sub" style="margin-bottom:28px">Estamos ubicados en un lugar de fácil acceso con estacionamiento disponible.</p>
+        <div class="contact-items">
+          <a class="contact-item" href="https://maps.app.goo.gl/q1t7rx5tTLiNsdBR8" target="_blank">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+            <div><div class="ci-label">Dirección</div><div class="ci-value">Plaza del Prado, contiguo a la POPS de Curridabat, San José</div></div>
+          </a>
+          <a class="contact-item" href="https://wa.me/50670549299" target="_blank">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.37 9.77 19.79 19.79 0 01.27 1.1 2 2 0 012.25 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+            <div><div class="ci-label">Teléfono / WhatsApp</div><div class="ci-value">+506 7054 9299</div></div>
+          </a>
+          <a class="contact-item" href="https://www.instagram.com/pellbellacr" target="_blank">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke-width="2.5"/></svg></div>
+            <div><div class="ci-label">Redes sociales</div><div class="ci-value">@PellBellaCr</div></div>
+          </a>
+          <div class="contact-item" style="cursor:default">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="ci-label">Horario de atención</div><div class="ci-value">Lunes a Viernes 8am–6pm · Sábados y Domingos 8am–5pm</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <!-- Tarjeta propia (no depende de Google ni de subir foto) -->
+        <a href="https://maps.app.goo.gl/q1t7rx5tTLiNsdBR8" target="_blank" rel="noopener"
+           class="map-photo-link" title="Ver ubicación en Google Maps">
+          <div class="map-photo-wrap">
+            <div class="map-photo-fallback" style="display:flex">
+              <div class="map-fb-inner">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <div class="map-fb-name">Plaza del Prado</div>
+                <div class="map-fb-addr">Contiguo a la POPS · Curridabat</div>
+              </div>
+            </div>
+            <!-- Overlay con pin y dirección -->
+            <div class="map-photo-overlay">
+              <div class="map-pin-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="rgba(0,0,0,.3)"/></svg>
+                Ver en Google Maps →
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="https://maps.app.goo.gl/q1t7rx5tTLiNsdBR8"
+           target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;color:var(--orange);font-weight:500">
+          📍 Plaza del Prado, contiguo a la POPS de Curridabat →
+        </a>
+        <a href="https://waze.com/ul/hd1u0rx555"
+           target="_blank" rel="noopener"
+           style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--text-mid);font-weight:500;transition:color .15s;width:fit-content"
+           onmouseover="this.style.color='var(--orange)'" onmouseout="this.style.color='var(--text-mid)'">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 01-2-2v-3.5a1 1 0 01.4-.8l2.1-1.6.9-2.7A2 2 0 018.3 5h7.4a2 2 0 011.9 1.4l.9 2.7 2.1 1.6a1 1 0 01.4.8V15a2 2 0 01-2 2M5 17a2 2 0 002 2h0a2 2 0 002-2M17 17a2 2 0 002 2h0a2 2 0 002-2M5 12h14"/></svg>
+          Llegar con Waze →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ AGENDA SIKU ══ -->
+<section id="agenda">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:720px;margin:0 auto 48px">
+      <span class="tag" style="justify-content:center">Reserva tu espacio</span>
+      <h2 class="section-title" style="text-align:center">Agenda tu <em style="font-style:italic;color:var(--orange)">cita hoy</em></h2>
+      <p class="section-sub" style="margin:0 auto">Primero cuéntanos qué te gustaría valorar y completa tus datos — así tu solicitud queda lista con toda la información. Luego elige el día y el horario disponible: tu espacio queda reservado de inmediato y la valoración inicial es completamente gratuita.</p>
+    </div>
+    <div class="agenda-top">
+      <div class="reveal-left">
+        <div class="pretreat-card">
+          <div style="text-align:center;margin-bottom:26px">
+            <span class="tag" style="justify-content:center">Antes de reservar</span>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--cream)">¿Qué te gustaría <em style="font-style:italic;color:var(--orange)">valorar?</em></h3>
+          </div>
+
+          <!-- Paso 1: Tipo de valoración -->
+          <div class="pretreat-step">
+            <div class="pretreat-step-head">
+              <div class="pretreat-step-num">1</div>
+              <div class="pretreat-step-title">Selecciona una opción 😊</div>
+            </div>
+            <div class="emoji-grid" id="pt-categorias">
+              <div class="emoji-opt" data-cat="facial" data-label="🧖‍♀️ Facial"><span class="emo">🧖‍♀️</span><span class="lbl">Facial</span></div>
+              <div class="emoji-opt" data-cat="corporal" data-label="💪 Corporal"><span class="emo">💪</span><span class="lbl">Corporal</span></div>
+              <div class="emoji-opt" data-cat="depilacion" data-label="✨ Depilación"><span class="emo">✨</span><span class="lbl">Depilación</span></div>
+              <div class="emoji-opt" data-cat="pelvico" data-label="🌸 Piso Pélvico"><span class="emo">🌸</span><span class="lbl">Piso Pélvico</span></div>
+              <div class="emoji-opt" data-cat="capilar" data-label="💇‍♀️ Regeneración capilar"><span class="emo">💇‍♀️</span><span class="lbl">Regeneración capilar</span></div>
+              <div class="emoji-opt" data-cat="sinespecificar" data-label="🙅‍♀️ No deseo dar especificaciones"><span class="emo">🙅‍♀️</span><span class="lbl">No deseo especificar</span></div>
+            </div>
+
+            <div class="sublist-wrap" id="wrap-facial">
+              <div class="chip-label">¿Qué te interesa del área facial? (puedes elegir varias)</div>
+              <div class="chip-group" data-sublist="facial">
+                <label class="chip"><input type="checkbox" value="Foto-rejuvenecimiento"><span class="chk"></span>Foto-rejuvenecimiento</label>
+                <label class="chip"><input type="checkbox" value="Mejora la textura de la piel"><span class="chk"></span>Mejora la textura de la piel</label>
+                <label class="chip"><input type="checkbox" value="Rosácea"><span class="chk"></span>Rosácea</label>
+                <label class="chip"><input type="checkbox" value="Depilación"><span class="chk"></span>Depilación</label>
+                <label class="chip"><input type="checkbox" value="Acné"><span class="chk"></span>Acné</label>
+                <label class="chip"><input type="checkbox" value="Vascularización"><span class="chk"></span>Vascularización</label>
+                <label class="chip"><input type="checkbox" value="Limpieza facial"><span class="chk"></span>Limpieza facial</label>
+              </div>
+            </div>
+            <div class="sublist-wrap" id="wrap-corporal">
+              <div class="chip-label">¿Qué te interesa del área corporal? (puedes elegir varias)</div>
+              <div class="chip-group" data-sublist="corporal">
+                <label class="chip"><input type="checkbox" value="Reducción de grasa localizada"><span class="chk"></span>Reducción de grasa localizada</label>
+                <label class="chip"><input type="checkbox" value="Aumento de masa muscular"><span class="chk"></span>Aumento de masa muscular</label>
+                <label class="chip"><input type="checkbox" value="Tensado en codos y rodillas"><span class="chk"></span>Tensado en codos y rodillas</label>
+                <label class="chip"><input type="checkbox" value="Tensado abdomen"><span class="chk"></span>Tensado abdomen</label>
+                <label class="chip"><input type="checkbox" value="Marcaje"><span class="chk"></span>Marcaje</label>
+                <label class="chip"><input type="checkbox" value="Manchas de piel"><span class="chk"></span>Manchas de piel</label>
+                <label class="chip"><input type="checkbox" value="Moldear cintura"><span class="chk"></span>Moldear cintura</label>
+                <label class="chip"><input type="checkbox" value="Tensado brazos y piernas"><span class="chk"></span>Tensado brazos y piernas</label>
+                <label class="chip"><input type="checkbox" value="Levantamiento de glúteos"><span class="chk"></span>Levantamiento de glúteos</label>
+                <label class="chip"><input type="checkbox" value="Ginecomastia (no invasivo)"><span class="chk"></span>Ginecomastia (no invasivo)</label>
+              </div>
+            </div>
+            <div class="sublist-wrap" id="wrap-depilacion">
+              <div class="chip-label">¿Qué zona te gustaría depilar? (puedes elegir varias)</div>
+              <div class="chip-group" data-sublist="depilacion">
+                <label class="chip"><input type="checkbox" value="Bigote"><span class="chk"></span>Bigote</label>
+                <label class="chip"><input type="checkbox" value="Barba"><span class="chk"></span>Barba</label>
+                <label class="chip"><input type="checkbox" value="Abdomen"><span class="chk"></span>Abdomen</label>
+                <label class="chip"><input type="checkbox" value="Espalda alta"><span class="chk"></span>Espalda alta</label>
+                <label class="chip"><input type="checkbox" value="Espalda baja"><span class="chk"></span>Espalda baja</label>
+                <label class="chip"><input type="checkbox" value="Línea alba"><span class="chk"></span>Línea alba</label>
+                <label class="chip"><input type="checkbox" value="Bikini"><span class="chk"></span>Bikini</label>
+                <label class="chip"><input type="checkbox" value="Bikini completo"><span class="chk"></span>Bikini completo</label>
+                <label class="chip"><input type="checkbox" value="Pierna superior"><span class="chk"></span>Pierna superior</label>
+                <label class="chip"><input type="checkbox" value="Pierna inferior"><span class="chk"></span>Pierna inferior</label>
+              </div>
+            </div>
+            <div class="sublist-wrap" id="wrap-pelvico">
+              <div class="chip-label">Zona pélvica — enfoque (puedes elegir varios)</div>
+              <div class="chip-group" data-sublist="pelvico">
+                <label class="chip"><input type="checkbox" value="Fortalecimiento"><span class="chk"></span>Fortalecimiento</label>
+                <label class="chip"><input type="checkbox" value="Foco en incontinencia urinaria o fecal"><span class="chk"></span>Foco en incontinencia urinaria o fecal</label>
+                <label class="chip"><input type="checkbox" value="Foco prolapso I, II y III, IV con referencia ginecológica"><span class="chk"></span>Foco prolapso I, II y III, IV con referencia ginecológica</label>
+                <label class="chip"><input type="checkbox" value="Mejorar las relaciones sexuales"><span class="chk"></span>Mejorar las relaciones sexuales</label>
+                <label class="chip"><input type="checkbox" value="Tensado de labios vaginales"><span class="chk"></span>Tensado de labios vaginales</label>
+              </div>
+            </div>
+            <div class="sublist-wrap" id="wrap-capilar">
+              <div class="chip-label">Regeneración capilar (puedes elegir varias)</div>
+              <div class="chip-group" data-sublist="capilar">
+                <label class="chip"><input type="checkbox" value="Regeneración con láser"><span class="chk"></span>Regeneración con láser</label>
+                <label class="chip"><input type="checkbox" value="Regeneración con Plasma rico en plaquetas"><span class="chk"></span>Regeneración con Plasma rico en plaquetas</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 2: Datos obligatorios -->
+          <div class="pretreat-step">
+            <div class="pretreat-step-head">
+              <div class="pretreat-step-num">2</div>
+              <div class="pretreat-step-title">Tus datos 📋</div>
+            </div>
+            <div class="pf-row">
+              <div class="pf-field full">
+                <label for="ptNombre">Nombre completo *</label>
+                <input class="pf-input" type="text" id="ptNombre" required>
+              </div>
+            </div>
+            <div class="pf-row">
+              <div class="pf-field">
+                <label for="ptCedula">Número de cédula *</label>
+                <input class="pf-input" type="text" id="ptCedula" required>
+              </div>
+              <div class="pf-field">
+                <label for="ptTelefono">Número de teléfono *</label>
+                <input class="pf-input" type="tel" id="ptTelefono" required>
+              </div>
+            </div>
+            <div class="pf-row">
+              <div class="pf-field full">
+                <label for="ptEmail">Correo electrónico *</label>
+                <input class="pf-input" type="email" id="ptEmail" required>
+              </div>
+            </div>
+            <p class="pretreat-note">☝️ Completa esto y luego elige tu día y hora justo debajo — tu solicitud se arma sola con toda la información.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+          <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid)">
+            <span style="width:10px;height:10px;border-radius:50%;background:#00BCD4;flex-shrink:0;display:inline-block;margin-top:4px"></span>
+            <span><strong style="color:var(--cream)">Disponible</strong> — haz clic en el día para ver los horarios libres y reservar directamente</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid)">
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--orange);flex-shrink:0;display:inline-block;margin-top:4px"></span>
+            <span><strong style="color:var(--cream)">Lleno</strong> — todas las citas del día están reservadas</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-mid)">
+            <span style="width:10px;height:10px;border-radius:50%;background:rgba(250,248,245,.15);flex-shrink:0;display:inline-block;margin-top:4px"></span>
+            <span><strong style="color:var(--cream)">Cerrado</strong> — domingos y días no laborales</span>
+          </div>
+        </div>
+        <div style="padding:14px 18px;background:rgba(0,188,212,.07);border:1px solid rgba(0,188,212,.18);border-radius:12px;font-size:12px;color:var(--text-mid);line-height:1.6;margin-bottom:14px">
+          <strong style="color:#80DEEA;display:block;margin-bottom:4px">💡 ¿Cómo funciona?</strong>
+          La agenda se sincroniza con las reservas existentes en Siku. Los días marcados en turquesa tienen horarios libres — haz clic para verlos y reservar por WhatsApp o en Siku.
+        </div>
+        <div style="padding:18px 20px;background:rgba(0,188,212,.07);border:1px solid rgba(0,188,212,.2);border-radius:14px;margin-bottom:24px">
+          <div style="font-size:12px;font-weight:500;color:#80DEEA;margin-bottom:6px">✓ Valoración gratuita incluida</div>
+          <div style="font-size:13px;color:var(--text-mid);line-height:1.6">Tu primera cita es sin costo. Nuestro equipo evalúa tu caso y te explica el tratamiento ideal, sin compromiso.</div>
+        </div>
+
+        <div id="ag-loading" class="agenda-loading">
+          <div class="spin"></div>
+          Cargando disponibilidad de Siku...
+        </div>
+        <div id="ag-calendar" class="agenda-inner" style="display:none">
+          <div class="agenda-head">
+            <div class="agenda-month-lbl" id="ag-month"></div>
+            <div class="agenda-nav">
+              <button onclick="agNav(-1)" title="Mes anterior">&#8249;</button>
+              <button onclick="agNav(1)" title="Mes siguiente">&#8250;</button>
+            </div>
+          </div>
+          <div class="cal-dow">
+            <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+          </div>
+          <div class="cal-grid" id="ag-grid"></div>
+          <div class="cal-legend">
+            <div class="cl-item"><span class="cl-dot" style="background:#00BCD4"></span>Disponible — haz clic para ver horarios</div>
+            <div class="cl-item"><span class="cl-dot" style="background:rgba(216,90,48,.7)"></span>Totalmente ocupado</div>
+            <div class="cl-item"><span class="cl-dot" style="background:rgba(250,248,245,.15)"></span>Cerrado</div>
+          </div>
+          <!-- Aviso si el API no carga (CORS u otro error) -->
+          <div id="ag-api-note" style="display:none;align-items:center;gap:10px;padding:10px 22px;background:rgba(216,90,48,.08);border-top:1px solid rgba(216,90,48,.15)">
+            <span style="font-size:18px">ℹ️</span>
+            <span style="font-size:12px;color:var(--orange)">Mostrando disponibilidad estándar. Para ver las reservas en tiempo real confirma por WhatsApp.</span>
+          </div>
+          <div class="slots-panel" id="ag-slots">
+            <div class="slots-title" id="ag-slots-title">Horarios</div>
+            <div class="slots-g" id="ag-slots-grid"></div>
+          </div>
+          <div class="agenda-cta">
+            <div class="agenda-note">Confirma tu cita por WhatsApp<br>o en Siku directamente.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button onclick="sendWhatsAppGeneric()" type="button"
+                 class="btn btn-outline" style="padding:10px 16px;font-size:13px">WhatsApp</button>
+              <a href="https://siku.io/pellbella" target="_blank"
+                 class="btn btn-primary" style="padding:10px 18px;font-size:13px">Agendar en Siku</a>
+            </div>
+          </div>
+        </div>
+        <div id="ag-error" style="display:none;background:var(--dark3);border:1px solid var(--border-light);border-radius:20px;padding:40px;text-align:center">
+          <div style="font-size:28px;margin-bottom:12px">📅</div>
+          <div style="font-size:15px;font-weight:500;color:var(--cream);margin-bottom:8px">Agenda disponible en Siku</div>
+          <div style="font-size:13px;color:var(--text-dim);margin-bottom:20px">Consulta disponibilidad en tiempo real y reserva tu cita:</div>
+          <a href="https://siku.io/pellbella" target="_blank" class="btn btn-primary" style="padding:12px 28px">Ver agenda completa →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOCIAL LINKS ══ -->
+<section id="social">
+  <div class="social-inner">
+    <h2 class="social-title reveal">Síguenos y <em style="color:var(--orange);font-style:italic">conéctate</em></h2>
+    <p class="social-sub reveal">Encuentra consejos, resultados y ofertas exclusivas en nuestras redes. Trabajamos Seguro Médicos por Reembolso fuera de Red</p>
+    <div class="social-links">
+      <a class="social-btn reveal delay-1" href="https://wa.me/50670549299?text=Hola%20PellBella%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n" target="_blank">
+        <div class="social-btn-icon" style="background:rgba(37,209,102,.12)"><svg viewBox="0 0 24 24" fill="#25D166" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+        <div class="social-btn-text"><span class="social-btn-label">WhatsApp</span><span class="social-btn-sub">+506 7054 9299 · Respuesta inmediata</span></div>
+        <span class="social-btn-arrow">→</span>
+      </a>
+      <a class="social-btn reveal delay-2" href="https://www.instagram.com/pellbellacr" target="_blank">
+        <div class="social-btn-icon" style="background:rgba(225,48,108,.1)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#C13584" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5" stroke-width="2.5"/></svg></div>
+        <div class="social-btn-text"><span class="social-btn-label">Instagram</span><span class="social-btn-sub">@PellBellaCr · Tips, resultados y ofertas</span></div>
+        <span class="social-btn-arrow">→</span>
+      </a>
+      <a class="social-btn reveal delay-3" href="https://www.facebook.com/PellBellaCr" target="_blank">
+        <div class="social-btn-icon" style="background:rgba(24,119,242,.1)"><svg viewBox="0 0 24 24" width="24" height="24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+        <div class="social-btn-text"><span class="social-btn-label">Facebook</span><span class="social-btn-sub">@PellBellaCr · Únete a nuestra comunidad</span></div>
+        <span class="social-btn-arrow">→</span>
+      </a>
+      <a class="social-btn reveal delay-4" href="https://m.me/PellBellaCr" target="_blank">
+        <div class="social-btn-icon" style="background:rgba(0,106,255,.1)"><svg viewBox="0 0 24 24" width="24" height="24" fill="#006AFF"><path d="M12 0C5.373 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.975 12-11.111S18.627 0 12 0zm1.194 14.963l-3.055-3.26-5.963 3.26L10.732 8.3l3.131 3.259L19.752 8.3l-6.558 6.663z"/></svg></div>
+        <div class="social-btn-text"><span class="social-btn-label">Messenger</span><span class="social-btn-sub">Chat directo por Facebook Messenger</span></div>
+        <span class="social-btn-arrow">→</span>
+      </a>
+      <a class="social-btn reveal delay-5" href="https://siku.io/pellbella" target="_blank" style="border-color:var(--border-orange)">
+        <div class="social-btn-icon" style="background:rgba(216,90,48,.12)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#D85A30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div>
+        <div class="social-btn-text"><span class="social-btn-label" style="color:var(--orange)">Agendar cita en Siku</span><span class="social-btn-sub">Reserva tu sesión · Valoración gratuita</span></div>
+        <span class="social-btn-arrow" style="color:var(--orange)">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ══ -->
+<section id="cta-final" class="cta-bg">
+  <div class="container-sm" style="text-align:center">
+    <span class="tag reveal" style="justify-content:center">No esperes más</span>
+    <h2 class="cta-title reveal">Recupera tu <em>libertad.</em><br>Da el paso hoy.</h2>
+    <p class="cta-sub reveal delay-1">La valoración inicial es completamente gratuita. Sin compromiso, sin presión. Solo información honesta y el tratamiento correcto para ti.</p>
+    <div class="cta-btns reveal delay-2">
+      <a href="https://siku.io/pellbella" target="_blank" class="btn btn-primary" style="padding:16px 36px;font-size:15px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Agendar valoración gratuita
+      </a>
+      <a href="https://wa.me/50670549299?text=Quiero%20agendar%20mi%20valoraci%C3%B3n%20gratuita%20en%20PellBella" target="_blank" class="btn btn-outline" style="padding:16px 36px;font-size:15px">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="logo-pellbellacr-full.png" alt="PellBella" style="height:38px;display:block"></div>
+    <div class="footer-copy">© 2026 PellBella Clínica Estética · Todos los derechos reservados · Curridabat, Costa Rica</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/pellbellacr" target="_blank">Instagram</a>
+      <a href="https://wa.me/50670549299" target="_blank">WhatsApp</a>
+      <a href="https://siku.io/pellbella" target="_blank">Agendar</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── REVEAL ON SCROLL ──
+const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); revObs.unobserve(e.target); }});
+}, {threshold:0.12});
+revealEls.forEach(el => revObs.observe(el));
+
+// ── STICKY NAV ──
+const sticky = document.getElementById('stickyCta');
+window.addEventListener('scroll', () => sticky.classList.toggle('show', window.scrollY > 600));
+
+// ── COUNTER ──
+function animateCount(el, target, dur, suf) {
+  let s = 0;
+  const step = ts => {
+    if(!s) s = ts;
+    const p = Math.min((ts-s)/dur, 1), e = 1-Math.pow(1-p,3);
+    el.textContent = Math.round(e*target) + (suf||'');
+    if(p<1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const cntObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const t = parseInt(e.target.dataset.count);
+      const suf = e.target.closest('#stats') ? (t===95?'%':t===3?'':'+') : (t===95?'%':t===200?'+':t===6?'':'+');
+      animateCount(e.target, t, 1400, suf);
+      cntObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+
+
+
+
+// ════ YOUTUBE IFRAME API ════
+var YT_READY = false;
+window.onYouTubeIframeAPIReady = function() { YT_READY = true; };
+
+function playVid(key, videoId) {
+  var box      = document.getElementById('vbox-'     + key);
+  var frameWrap = document.getElementById('vframe-'  + key);
+  var blocked  = document.getElementById('vblocked-' + key);
+  if (!box) return;
+
+  // ── Local file: YouTube always blocks file:// embeds ──
+  if (window.location.protocol === 'file:') {
+    // Show blocked notice with YouTube link
+    blocked.style.display = 'flex';
+    return;
+  }
+
+  // ── Activate player ──
+  box.classList.add('playing');
+
+  var origin  = encodeURIComponent(window.location.origin);
+  var embedSrc = 'https://www.youtube.com/embed/' + videoId
+    + '?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=' + origin;
+
+  if (YT_READY) {
+    // Use official IFrame API (best compatibility + error handling)
+    var div = document.createElement('div');
+    div.id  = 'yt-' + key;
+    div.style.cssText = 'width:100%;height:100%';
+    frameWrap.appendChild(div);
+
+    new YT.Player('yt-' + key, {
+      videoId: videoId,
+      width: '100%',
+      height: '100%',
+      playerVars: {
+        autoplay: 1,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        origin: window.location.origin
+      },
+      events: {
+        onReady: function(e) { e.target.playVideo(); },
+        onError: function(e) {
+          // Codes: 2=bad ID, 5=HTML5 error, 100=not found, 101/150=embedding blocked
+          box.classList.remove('playing');
+          blocked.style.display = 'flex';
+        }
+      }
+    });
+  } else {
+    // IFrame API not loaded yet — fallback to direct iframe
+    var iframe = document.createElement('iframe');
+    iframe.src = embedSrc;
+    iframe.allow = 'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share';
+    iframe.allowFullscreen = true;
+    iframe.style.cssText = 'width:100%;height:100%;border:none;display:block';
+    iframe.title = videoId + ' BTL PellBella';
+    frameWrap.appendChild(iframe);
+  }
+}
+
+// ── SIKU AGENDA ──
+// El API devuelve los slots RESERVADOS. Mostramos solo lo que queda DISPONIBLE.
+const SIKU_URL = 'https://portalapi.sikumedico.com/api/Calendario/v1/Agenda/2577E1DF-5F05-4C12-9C98-2AB021BBB50F/1/0';
+const MES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+// Horario laboral de PellBella — ajusta si cambia
+const HORARIO = {
+  0: [],                                                             // Domingo: cerrado
+  1: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'],  // Lunes
+  2: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'],
+  3: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'],
+  4: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'],
+  5: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'],
+  6: ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','16:00','16:30'],  // Sábado
+};
+
+let agYear, agMonth;
+// reservedMap: { "YYYY-MM-DD": Set<"HH:MM"> }
+let reservedMap = {};
+let apiLoaded = false;
+
+// ── PARSE API RESPONSE ── (el API devuelve los reservados)
+function parseReserved(data) {
+  const map = {};
+  const list = Array.isArray(data) ? data
+    : (data?.data || data?.agenda || data?.citas || data?.items
+       || data?.reservaciones || data?.appointments || data?.slots || []);
+
+  list.forEach(item => {
+    // Extraer fecha — múltiples formatos posibles de Siku
+    const rawFecha = item.Fecha || item.fecha || item.FechaInicio || item.fechaInicio
+                   || item.Date || item.date || item.startDate || item.start || '';
+    const dateKey = String(rawFecha).substring(0, 10); // "YYYY-MM-DD"
+    if (!dateKey || dateKey.length < 10) return;
+
+    // Extraer hora
+    const rawHora = item.Hora || item.hora || item.HoraInicio || item.horaInicio
+                  || item.Time || item.time || item.startTime || '';
+    let horaKey = '';
+    if (rawHora) {
+      // Puede venir como "09:00:00", "9:00", "09:00"
+      const parts = String(rawHora).replace(/^.*T/, '').split(':');
+      if (parts.length >= 2) horaKey = `${parseInt(parts[0])}:${parts[1].padStart(2,'0')}`;
+    } else if (rawFecha.includes('T')) {
+      // Fecha y hora en un solo campo ISO
+      const timePart = rawFecha.split('T')[1] || '';
+      const parts = timePart.split(':');
+      if (parts.length >= 2) horaKey = `${parseInt(parts[0])}:${parts[1].padStart(2,'0')}`;
+    }
+
+    // Solo agregar si el slot está OCUPADO/RESERVADO
+    // (asumimos que todo lo que viene del API está reservado,
+    //  a menos que haya un campo explícito que diga lo contrario)
+    const ocupado = item.Ocupado ?? item.ocupado ?? item.Busy ?? item.busy
+                  ?? item.Reservado ?? item.reservado ?? item.isBooked
+                  ?? item.Estado ?? item.estado ?? true; // default: reservado
+    const esOcupado = ocupado === true || ocupado === 1
+                    || String(ocupado).toLowerCase() === 'ocupado'
+                    || String(ocupado).toLowerCase() === 'reservado'
+                    || String(ocupado).toLowerCase() === 'true';
+
+    if (esOcupado) {
+      if (!map[dateKey]) map[dateKey] = new Set();
+      if (horaKey) map[dateKey].add(horaKey);
+      else map[dateKey].add('__ALL__'); // día completo bloqueado
+    }
+  });
+  return map;
+}
+
+// ── AVAILABLE SLOTS FOR A DAY ──
+function getAvailableSlots(dateKey) {
+  const dt = new Date(dateKey + 'T12:00:00');
+  const dow = dt.getDay();
+  const allSlots = HORARIO[dow] || [];
+  if (!allSlots.length) return []; // día cerrado
+
+  const reserved = reservedMap[dateKey];
+  let available = !reserved ? allSlots.slice()
+    : reserved.has('__ALL__') ? []
+    : allSlots.filter(slot => !reserved.has(slot));
+
+  // Si es HOY, bloquear los horarios que empiecen en menos de 1 hora
+  // (no da tiempo de coordinar/agendar con tan poca anticipación)
+  const now = new Date();
+  const todayKey = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  if (dateKey === todayKey) {
+    const minBookable = new Date(now.getTime() + 60 * 60 * 1000); // ahora + 1 hora
+    available = available.filter(slot => {
+      const [h, m] = slot.split(':').map(Number);
+      const slotDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m);
+      return slotDate >= minBookable;
+    });
+  }
+
+  return available;
+}
+
+// ── CALENDAR RENDERING ──
+function renderAg() {
+  document.getElementById('ag-month').textContent = MES[agMonth] + ' ' + agYear;
+  const grid = document.getElementById('ag-grid');
+  grid.innerHTML = '';
+  const firstDow = new Date(agYear, agMonth, 1).getDay();
+  const daysInMonth = new Date(agYear, agMonth + 1, 0).getDate();
+  const todayStr = new Date().toISOString().substring(0, 10);
+
+  // Empty cells before first day
+  for (let i = 0; i < firstDow; i++) {
+    const el = document.createElement('div');
+    el.className = 'cal-day';
+    grid.appendChild(el);
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dateKey = `${agYear}-${String(agMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const dt = new Date(dateKey + 'T12:00:00');
+    const dow = dt.getDay();
+    const isPast = dt < new Date(new Date().toDateString());
+    const isToday = dateKey === todayStr;
+    const isClosed = (HORARIO[dow] || []).length === 0; // domingo
+
+    const available = getAvailableSlots(dateKey);
+    const totalSlots = (HORARIO[dow] || []).length;
+    const reservedCount = totalSlots - available.length;
+
+    const div = document.createElement('div');
+    const numDiv = document.createElement('div');
+    numDiv.className = 'dnum';
+    numDiv.textContent = d;
+    div.appendChild(numDiv);
+
+    if (isPast || isClosed) {
+      div.className = 'cal-day past';
+    } else {
+      if (available.length === 0) {
+        // Completamente ocupado
+        div.className = 'cal-day busy';
+        const pill = document.createElement('div');
+        pill.className = 'dpill dpill-busy';
+        pill.textContent = 'Lleno';
+        div.appendChild(pill);
+      } else if (reservedCount > 0 && available.length > 0) {
+        // Parcialmente disponible
+        div.className = 'cal-day avail has-slots';
+        const pill = document.createElement('div');
+        pill.className = 'dpill dpill-avail';
+        pill.textContent = available.length + ' libre' + (available.length !== 1 ? 's' : '');
+        div.appendChild(pill);
+        div.addEventListener('click', () => showAvailable(dateKey, d, available));
+      } else {
+        // Totalmente disponible
+        div.className = 'cal-day avail has-slots';
+        const pill = document.createElement('div');
+        pill.className = 'dpill dpill-avail';
+        pill.textContent = 'Disponible';
+        div.appendChild(pill);
+        div.addEventListener('click', () => showAvailable(dateKey, d, available));
+      }
+    }
+
+    if (isToday) div.classList.add('today');
+    grid.appendChild(div);
+  }
+
+  document.getElementById('ag-slots').style.display = 'none';
+}
+
+// ── SHOW ONLY AVAILABLE SLOTS ──
+function showAvailable(dateKey, day, slots) {
+  const panel = document.getElementById('ag-slots');
+  const sgrid = document.getElementById('ag-slots-grid');
+  const title = document.getElementById('ag-slots-title');
+
+  title.textContent = day + ' de ' + MES[agMonth] + ' — ' + slots.length + ' horario' + (slots.length !== 1 ? 's' : '') + ' disponible' + (slots.length !== 1 ? 's' : '');
+  sgrid.innerHTML = '';
+
+  if (!slots.length) {
+    sgrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;font-size:13px;color:var(--text-dim);padding:12px">Sin disponibilidad para este día.</div>';
+    panel.style.display = 'block';
+    return;
+  }
+
+  slots.forEach(hora => {
+    const btn = document.createElement('button');
+    btn.className = 'slot';
+    btn.textContent = hora;
+    btn.title = 'Reservar ' + hora;
+    btn.onclick = () => {
+      if (!pretreatIsComplete()) { pretreatFocus(); return; }
+      const fecha = day + '/' + (agMonth+1) + '/' + agYear;
+      const msg = buildPretreatMessage(fecha, hora);
+      showPatientThanks('https://wa.me/50670549299?text=' + encodeURIComponent(msg));
+    };
+    sgrid.appendChild(btn);
+  });
+
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function agNav(dir) {
+  agMonth += dir;
+  if (agMonth > 11) { agMonth = 0; agYear++; }
+  if (agMonth < 0)  { agMonth = 11; agYear--; }
+  document.getElementById('ag-slots').style.display = 'none';
+  renderAg();
+}
+
+// ── LOAD FROM SIKU API ──
+async function loadAgenda() {
+  const now = new Date();
+  agYear = now.getFullYear();
+  agMonth = now.getMonth();
+
+  try {
+    const ctrl = new AbortController();
+    const timeout = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(SIKU_URL, {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' },
+      signal: ctrl.signal
+    });
+    clearTimeout(timeout);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    reservedMap = parseReserved(data);
+    apiLoaded = true;
+    console.log('Siku cargado. Días con reservas:', Object.keys(reservedMap).length);
+  } catch (err) {
+    console.warn('Siku API no disponible:', err.message,
+      '— mostrando calendario con disponibilidad estándar.');
+    reservedMap = {};
+    apiLoaded = false;
+  }
+
+  document.getElementById('ag-loading').style.display = 'none';
+  document.getElementById('ag-calendar').style.display = 'block';
+
+  if (!apiLoaded) {
+    // Banner sutil de aviso
+    const note = document.getElementById('ag-api-note');
+    if (note) note.style.display = 'flex';
+  }
+  renderAg();
+}
+
+// ── PRE-AGENDA: selección de tratamiento + datos obligatorios ──
+const PT_SUBLISTS = { facial:'wrap-facial', corporal:'wrap-corporal', depilacion:'wrap-depilacion', pelvico:'wrap-pelvico', capilar:'wrap-capilar' };
+
+document.querySelectorAll('#pt-categorias .emoji-opt').forEach(opt => {
+  opt.addEventListener('click', () => {
+    const cat = opt.dataset.cat;
+
+    if (cat === 'sinespecificar') {
+      // "No deseo especificar" es excluyente: si se elige, se limpian las demás
+      document.querySelectorAll('#pt-categorias .emoji-opt').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      Object.values(PT_SUBLISTS).forEach(id => document.getElementById(id).classList.remove('show'));
+      return;
+    }
+
+    // Cualquier otra opción quita "No deseo especificar" si estaba activa
+    const noEsp = document.querySelector('#pt-categorias .emoji-opt[data-cat="sinespecificar"]');
+    if (noEsp) noEsp.classList.remove('active');
+
+    // Toggle normal (multi-selección)
+    opt.classList.toggle('active');
+    const wrapId = PT_SUBLISTS[cat];
+    if (wrapId) document.getElementById(wrapId).classList.toggle('show', opt.classList.contains('active'));
+  });
+});
+
+// Chips: multi-selección — al hacer clic en la etiqueta se marca/desmarca el checkbox y se resalta
+document.querySelectorAll('.chip').forEach(chip => {
+  const cb = chip.querySelector('input[type="checkbox"]');
+  cb.addEventListener('change', () => chip.classList.toggle('active', cb.checked));
+});
+
+// Devuelve las categorías "seleccionadas" de forma robusta: cuenta tanto las que
+// tienen el recuadro activo como las que ya tienen algún detalle marcado por dentro
+// (por si el recuadro se desactivó sin querer al combinar varias categorías).
+function getSelectedCategories() {
+  const seen = new Set();
+  const result = [];
+
+  document.querySelectorAll('#pt-categorias .emoji-opt').forEach(opt => {
+    const cat = opt.dataset.cat;
+    if (cat === 'sinespecificar') return;
+    const wrapId = PT_SUBLISTS[cat];
+    const hasChecked = wrapId && document.querySelectorAll('#' + wrapId + ' input[type="checkbox"]:checked').length > 0;
+    if (opt.classList.contains('active') || hasChecked) {
+      if (!seen.has(cat)) {
+        seen.add(cat);
+        result.push(opt);
+        // Si tiene detalles marcados, aseguramos que se vea resaltado y su sublista visible
+        if (hasChecked && !opt.classList.contains('active')) {
+          opt.classList.add('active');
+          document.getElementById(wrapId).classList.add('show');
+        }
+      }
+    }
+  });
+
+  // "No deseo especificar" cuenta solo si está solo (no hay combinación)
+  const noEsp = document.querySelector('#pt-categorias .emoji-opt[data-cat="sinespecificar"]');
+  if (result.length === 0 && noEsp && noEsp.classList.contains('active')) result.push(noEsp);
+
+  return result;
+}
+
+function pretreatIsComplete() {
+  const nombre = document.getElementById('ptNombre').value.trim();
+  const cedula = document.getElementById('ptCedula').value.trim();
+  const telefono = document.getElementById('ptTelefono').value.trim();
+  const email = document.getElementById('ptEmail').value.trim();
+  const algunaCategoria = getSelectedCategories().length > 0;
+  return !!(algunaCategoria && nombre && cedula && telefono && email);
+}
+
+function pretreatFocus() {
+  alert('Por favor selecciona qué te gustaría valorar (puedes elegir varias opciones) y completa tus datos (nombre, cédula, teléfono y correo) antes de elegir el horario.');
+  document.querySelector('.pretreat-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ── MENSAJE CÁLIDO AL PACIENTE, justo antes de abrir WhatsApp ──
+function showPatientThanks(url) {
+  const overlay = document.createElement('div');
+  overlay.className = 'pt-thanks-overlay';
+  overlay.innerHTML = `
+    <div class="pt-thanks-card">
+      <div class="pt-thanks-emoji">\ud83d\udc9b\u2728</div>
+      <div class="pt-thanks-title">\u00a1Gracias por confiar en nosotras!</div>
+      <div class="pt-thanks-line"><span class="e">\ud83d\ude4f</span><span>Gracias por interesarte y confiar en nuestros servicios.</span></div>
+      <div class="pt-thanks-line"><span class="e">\ud83d\udcac</span><span>Comprendemos lo que necesitas y queremos conocerte para apoyarte en este importante cambio.</span></div>
+      <div class="pt-thanks-line"><span class="e">\u2705</span><span>Ya confirmamos tus datos para el registro \u2014 validaremos que todo est\u00e9 s\u00faper bien para tu d\u00eda.</span></div>
+      <button type="button" class="btn btn-primary pt-thanks-btn" id="ptThanksContinue">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:6px"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.9 11.9L4 20l4.2-1.1a7.93 7.93 0 003.85 1h0a7.94 7.94 0 007.94-7.94 7.9 7.9 0 00-2.4-5.64zm-5.55 12.2h0a6.6 6.6 0 01-3.37-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 1112.28-3.5 6.63 6.63 0 01-6.68 6.6z"/></svg>
+        Continuar a WhatsApp
+      </button>
+    </div>`;
+  document.body.appendChild(overlay);
+  document.getElementById('ptThanksContinue').onclick = () => {
+    window.open(url, '_blank');
+    overlay.remove();
+  };
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+}
+
+// \u2500\u2500 FORMULARIO "QUIERO ANALIZAR MIS RESULTADOS" \u2500\u2500
+const analisisFormEl = document.getElementById('analisisForm');
+if (analisisFormEl) {
+  analisisFormEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nombre = document.getElementById('anNombre').value.trim();
+    const ap1 = document.getElementById('anApellido1').value.trim();
+    const ap2 = document.getElementById('anApellido2').value.trim();
+    const identidad = document.getElementById('anIdentidad').value.trim();
+    const email = document.getElementById('anEmail').value.trim();
+    const telefono = document.getElementById('anTelefono').value.trim();
+    const direccion = document.getElementById('anDireccion').value.trim();
+    const cupon = document.getElementById('anCupon').value.trim();
+
+    let msg = '\u00a1Hola PellBella! \ud83d\udc4b\u2728\n';
+    msg += 'Quiero *analizar mis resultados* del evento. Aqu\u00ed mis datos:\n\n';
+    msg += '\ud83d\udc64 *Nombre completo:* ' + nombre + ' ' + ap1 + (ap2 ? ' ' + ap2 : '') + '\n';
+    msg += '\ud83e\udeaa *Identidad:* ' + identidad + '\n';
+    msg += '\ud83d\udce7 *Correo:* ' + email + '\n';
+    msg += '\ud83d\udcf1 *Tel\u00e9fono:* ' + telefono + '\n';
+    if (direccion) msg += '\ud83d\udccd *Direcci\u00f3n:* ' + direccion + '\n';
+    if (cupon) msg += '\ud83c\udf9f\ufe0f *Cup\u00f3n evento:* ' + cupon + '\n';
+    msg += '\nQuedo atento/a a mi an\u00e1lisis. \u00a1Gracias! \ud83d\udc9b';
+
+    showPatientThanks('https://wa.me/50670549299?text=' + encodeURIComponent(msg));
+  });
+}
+
+function buildPretreatMessage(fecha, hora) {
+  const catEls = getSelectedCategories();
+
+  const nombre = document.getElementById('ptNombre').value.trim();
+  const cedula = document.getElementById('ptCedula').value.trim();
+  const telefono = document.getElementById('ptTelefono').value.trim();
+  const email = document.getElementById('ptEmail').value.trim();
+  const primerNombre = nombre.split(' ')[0] || nombre;
+
+  let msg = '\u00a1Hola PellBella! \ud83d\udc4b\ud83d\udc95\n';
+  msg += 'Soy ' + primerNombre + ' y me encantar\u00eda agendar mi *valoraci\u00f3n gratuita* \u2014 \u00a1qu\u00e9 emoci\u00f3n! \ud83e\udd70\n\n';
+  msg += 'Esto es lo que me gustar\u00eda valorar' + (catEls.length > 1 ? ' (eleg\u00ed varias \u00e1reas)' : '') + ':\n';
+
+  catEls.forEach((catEl, i) => {
+    const cat = catEl.dataset.cat;
+    const catLabel = catEl.dataset.label; // ya incluye emoji + nombre, ej: "\ud83e\uddd6\u200d\u2640\ufe0f Facial"
+    const wrapId = PT_SUBLISTS[cat];
+    let subItems = [];
+    if (wrapId) {
+      const checked = document.querySelectorAll('#' + wrapId + ' input[type="checkbox"]:checked');
+      subItems = Array.from(checked).map(cb => cb.value);
+    }
+
+    msg += '\n\ud83c\udfaf *Tratamiento ' + (i + 1) + ':* ' + catLabel + '\n';
+    if (subItems.length) {
+      msg += '\ud83d\udcdd *Detalle espec\u00edfico' + (subItems.length > 1 ? ' (eleg\u00ed varias opciones)' : '') + ':*\n';
+      subItems.forEach(item => { msg += '   \u2705 ' + item + '\n'; });
+    }
+  });
+
+  msg += '\n\ud83d\udc64 *Mis datos para el registro:*\n';
+  msg += '\ud83d\udcdb Nombre: ' + nombre + '\n';
+  msg += '\ud83e\udeaa C\u00e9dula: ' + cedula + '\n';
+  msg += '\ud83d\udcf1 Tel\u00e9fono: ' + telefono + '\n';
+  msg += '\ud83d\udce7 Correo: ' + email + '\n';
+
+  if (fecha || hora) {
+    msg += '\n\ud83d\udcc5 *Fecha:* ' + (fecha || 'Por confirmar') + '\n';
+    msg += '\ud83d\udd50 *Hora:* ' + (hora || 'Por confirmar') + '\n';
+  }
+
+  msg += '\n\u00a1Quedo muy atenta/o a la confirmaci\u00f3n! Gracias por acompa\u00f1arme en este paso \ud83d\udc9b\u2728';
+  return msg;
+}
+
+function sendWhatsAppGeneric() {
+  if (!pretreatIsComplete()) { pretreatFocus(); return; }
+  const msg = buildPretreatMessage('', '');
+  showPatientThanks('https://wa.me/50670549299?text=' + encodeURIComponent(msg));
+}
+
+// Load when visible
+const agSection = document.getElementById('agenda');
+if (agSection) {
+  const agObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { loadAgenda(); agObs.disconnect(); }
+  }, { threshold: 0.1 });
+  agObs.observe(agSection);
+}
+</script>
+</body>
+</html>
